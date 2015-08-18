@@ -9,7 +9,7 @@ package model.classe.date;
  *
  * @author antonio
  */
-public class DateAnoMes extends Date {
+class DateAnoMes extends Date {
 
     public DateAnoMes(int month, int year) {
         super(month, year);
@@ -33,6 +33,12 @@ public class DateAnoMes extends Date {
             }
         }
         return resulCompare;
+    }
+    
+    
+    @Override
+    public String toString() {
+        return this.getMonth()+"/"+ this.getYear();
     }
 
 }
