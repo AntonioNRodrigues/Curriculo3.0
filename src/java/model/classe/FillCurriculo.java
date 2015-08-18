@@ -141,7 +141,7 @@ public class FillCurriculo {
                 "Docente",
                 "Leccionar a disciplina de Educação Física do 2º ao 4º ano de escolaridade (1ºCiclo).",
                 "Escola N.º2 da Bobadela (Lisboa).");
-        wExperience.addExperience("09/2010-02/2015",
+        wExperience.addExperience("09/2010-08/2015",
                 "Professor",
                 "Lecionar aulas de natação",
                 "Holmes Place - Dolce Vita Tejo (Amadora)");
@@ -193,7 +193,7 @@ public class FillCurriculo {
                 "Docente",
                 "Leccionar a disciplina de Educação Física a 5 turmas do 1ºCiclo (10h por semana).",
                 "Escola EB1 nº1 de Casal de Cambra");
-        wExperience.addExperience("09/2006-07/2007 ",
+        wExperience.addExperience("09/2006-07/2007",
                 "Docente",
                 "Leccionar a disciplina de Educação Física a 5 turmas do 3ºCiclo ao Secundário (12h por semana).",
                 "Colégio D. Filipa (Amadora)");
