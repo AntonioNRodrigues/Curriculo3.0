@@ -137,90 +137,90 @@ public class FillCurriculo {
 
     private void fillWorkExp() {
         wExperience = new WorkExperience();
-        wExperience.addExperience("De Outubro 2012 a Junho de 2013",
+        wExperience.addExperience("10/2012-07/2013",
                 "Docente",
                 "Leccionar a disciplina de Educação Física do 2º ao 4º ano de escolaridade (1ºCiclo).",
                 "Escola N.º2 da Bobadela (Lisboa).");
-        wExperience.addExperience("Desde Setembro 2010 a Fevereiro 2015",
+        wExperience.addExperience("09/2010-02/2015",
                 "Professor",
                 "Lecionar aulas de natação",
                 "Holmes Place - Dolce Vita Tejo (Amadora)");
-        wExperience.addExperience("De Setembro 2010 a Agosto de 2011",
+        wExperience.addExperience("09/2010-08/2011",
                 "Docente",
                 "Leccionar a disciplina de Educação Física a 3 turmas do 3ºCiclo (9h por semana)",
                 "Escola Básica Integrada Patrício Prazeres (Lisboa)");
-        wExperience.addExperience("De Setembro 2009 a Agosto de 2010",
+        wExperience.addExperience("09/2009-08/2010",
                 "Docente",
                 "Leccionar a disciplina de Educação Física/ Área de Expressões a 5 turmas do Secundário - Cursos Profissionais /3.ºCiclo - Cursos de Educação e Formação; Treinador da equipa de Futsal Feminino no âmbito do Desporto Escolar (horário completo 22h + 2 horas extraordinárias).",
                 "Escola Secundária da Moita (Moita).");
-        wExperience.addExperience("De Outubro de 2008 a Agosto de 2009",
+        wExperience.addExperience("10/2008-09/2009",
                 "Docente",
                 "Leccionar a disciplina de Educação Física/ Área Projecto a 4 turmas do 3ºCiclo (14h por semana)",
                 "Escola EB2/3 Alto do Moinho (Catujal - Loures).");
-        wExperience.addExperience("De Setembro de 2008 a Outubro de 2008",
+        wExperience.addExperience("09/2008-10/2008",
                 "Docente",
                 "Leccionar a disciplina de Educação Física a 4 turmas do 1ºCiclo (12h por semana).",
                 "Escola EB1 nº1 de Casal de Cambra.");
-        wExperience.addExperience("De Setembro de 2008 a Outubro de 2008",
+        wExperience.addExperience("09/2008-10/2008",
                 "Docente",
                 "Leccionar a disciplina de Educação Física a 4 turmas do 3ºCiclo ao Secundário (11h por semana).",
                 "Colégio D. Filipa (Amadora)");
-        wExperience.addExperience("De Julho de 2008 a Agosto de 2008 (2 semanas)",
+        wExperience.addExperience("07/2008-10/2008 (2 semanas)",
                 "Coordenador de uma equipa de animação de praia",
                 "Organização, implementação e arbitragem de torneios de futebol de praia, bitoque rugby e futebol 2x2.",
                 "C.I Eventos, Leiriasport (praia do Pedrogão)");
-        wExperience.addExperience("De Julho de 2008 a Julho de 2008 (1 semana)",
+        wExperience.addExperience("07/2008-07/2008 (1 semana)",
                 "Animador/Monitor de Campos de Férias",
                 "Monitor e animador de Campos de Férias com actividades de desporto aventura e de carácter recreativo.",
                 "Sniper, Parque Aventura(Bucelas)");
-        wExperience.addExperience("De Setembro de 2007 a Junho de 2008",
+        wExperience.addExperience("09/2007-06/2008",
                 "Docente",
                 "Leccionar a disciplina de Educação Física a 4 turmas do 3ºCiclo ao Secundário (10h por semana).",
                 "Colégio D. Filipa (Amadora)");
-        wExperience.addExperience("De Outubro de 2007 a Junho de 2008",
+        wExperience.addExperience("10/2007-06/2008",
                 "Docente",
                 "Leccionar a disciplina de Educação Física a 4 turmas do 1ºCiclo (8h por semana).",
                 "Escola EB1 nº1 de Casal de Cambra");
-        wExperience.addExperience("De Julho de 2007 a Julho de 2007 (2 semanas)",
+        wExperience.addExperience("07/2007-07/2007 (2 semanas)",
                 "Animador/Monitor de Campos de Férias",
                 "Monitor e animador de Campos de Férias com actividades de desporto aventura e de carácter recreativo.",
                 "Sniper, Parque Aventura(Bucelas)");
-        wExperience.addExperience("De Maio de 2007 a Setembro 2013 (trabalho ocasional)",
+        wExperience.addExperience("05/2007-09/2013 (trabalho ocasional)",
                 "Monitor de Desporto Aventura",
                 "Monitorizar actividades como Pontes de Cordas, Rappel, Escalada, Slide, Simulação de Pára-quedas e Arbitrar Jogos de Paintball.",
                 "Sniper, Parque Aventura (Bucelas)");
-        wExperience.addExperience("De Outubro de 2006 a Junho de 2007",
+        wExperience.addExperience("10/2006-07/2007",
                 "Docente",
                 "Leccionar a disciplina de Educação Física a 5 turmas do 1ºCiclo (10h por semana).",
                 "Escola EB1 nº1 de Casal de Cambra");
-        wExperience.addExperience("De Setembro de 2006 a Junho de 2007 ",
+        wExperience.addExperience("09/2006-07/2007 ",
                 "Docente",
                 "Leccionar a disciplina de Educação Física a 5 turmas do 3ºCiclo ao Secundário (12h por semana).",
                 "Colégio D. Filipa (Amadora)");
-        wExperience.addExperience("De Setembro de 2006 a Outubro de 2006",
+        wExperience.addExperience("09/2006-10/2006",
                 "Docente",
                 "Leccionar a disciplina de Educação Física a 4 turmas do 1ºCiclo (9h por semana).",
                 "Escola D. Pedro V (Linda-a-Velha)");
-        wExperience.addExperience("De Setembro de 2005 a Junho de 2006",
+        wExperience.addExperience("09/2005-07/2006",
                 "Docente",
                 "Leccionar a disciplina de Educação Física do 1º ao 4º ano de escolaridade (1ºCiclo).",
                 "Centro Comunitário de Casal da Cambra – Solami (Sintra)");
-        wExperience.addExperience("De Janeiro de 2006 a Março de 2006",
+        wExperience.addExperience("01/2006-03/2006",
                 "Treinador Adjunto de Futebol 11", "Assistir o treinador principal na orientação e preparação da equipa de juvenis.",
                 "Clube Desportivo dos Olivais e Moscavide (Lisboa)");
-        wExperience.addExperience("De Setembro de 2004 a Março de 2005",
+        wExperience.addExperience("09/2004-03/2005",
                 "Docente Estagiário",
                 "Leccionei a disciplina de Educação Física ao 9ºano de escolaridade.",
                 "Escola Básica do 2º e 3º Ciclos de Anadia (Aveiro)");
-        wExperience.addExperience("De Agosto de 2003 a Agosto de 2003 (1 semana)",
+        wExperience.addExperience("08/2003-08/2003 (1 semana)",
                 "Monitor de Colónia de Férias / Actividades Desportivas",
                 "Acompanhar e desenvolver actividades junto de um grupo de jovens que estava sobre a minha responsabilidade, durante o dia.",
                 "Equinócio (Lisboa)");
-        wExperience.addExperience("De Julho de 2003 a Julho de 2003 (2 semanas)",
+        wExperience.addExperience("07/2003-07/2003 (2 semanas)",
                 "Monitor de Colónia de Férias / Actividades Recreativas",
                 "Acompanhar e desenvolver actividades junto de um grupo de jovens que estava sobre a minha responsabilidade, durante vários dias consecutivos.",
                 "Junta de Freguesia de Famões (Odivelas)");
-        wExperience.addExperience("De Julho de 2002 a Julho de 2002 (2 semanas)",
+        wExperience.addExperience("07/2002-07/2002 (2 semanas)",
                 "Monitor de Colónia de Férias / Actividades Recreativas",
                 "Acompanhar e desenvolver actividades junto de um grupo de jovens que estava sobre a minha responsabilidade, durante vários dias consecutivos.",
                 "Junta de Freguesia de Famões (Odivelas)");
