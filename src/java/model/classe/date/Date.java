@@ -1,33 +1,31 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
  */
-package model.classes;
+package model.classe.date;
 
 /**
  *
  * @author Antonio Rodrigues
+ * @date 
  */
-public class date {
+public abstract class Date implements Dateable<Date> {
 
     private int day;
     private int month;
     private int year;
 
-    public date(int day, int month, int year) {
+    public Date(int day, int month, int year) {
         this.day = day;
         this.month = month;
         this.year = year;
     }
 
-    public date(int month, int year) {
+    public Date(int month, int year) {
         this.day = 0;
         this.month = month;
         this.year = year;
     }
 
-    public date(int year) {
+    public Date(int year) {
         this.day = 0;
         this.month = 0;
         this.year = year;
@@ -56,5 +54,8 @@ public class date {
     public void setYear(int year) {
         this.year = year;
     }
+
+    @Override
+    public abstract int compareTo(Date o);
 
 }
