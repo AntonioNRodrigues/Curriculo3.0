@@ -22,6 +22,7 @@ public class WorkExperience {
     }
 
     public void addExperience(String d, String j, String jAct, String place) {
+        
         Experience exp = factoryExperiences(d, j, jAct, place);
         catExperiencies.put(exp.hashCode(), exp);
     }
