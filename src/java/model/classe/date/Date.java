@@ -7,7 +7,7 @@ package model.classe.date;
  * @author Antonio Rodrigues
  * @date 
  */
-public abstract class Date implements Dateable<Date> {
+public abstract class Date implements Comparable<Date>{
 
     private int day;
     private int month;
@@ -55,7 +55,13 @@ public abstract class Date implements Dateable<Date> {
         this.year = year;
     }
 
-    @Override
     public abstract int compareTo(Date o);
+
+    @Override
+    public String toString() {
+        return "Date{" + "day=" + day + ", month=" + month + ", year=" + year + '}';
+    }
+    
+    
 
 }
