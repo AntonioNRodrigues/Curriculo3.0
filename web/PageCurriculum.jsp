@@ -90,7 +90,7 @@
                     <ul id="ExpDocente">
                         <c:forEach var="expEdFisica" items="${expEdFisica}"> 
                             <li>
-                                <b>Datas: </b>${expEdFisica.date} <br> 
+                                <b>Datas: </b>${expEdFisica.dateStart}-${expEdFisica.dateLeft} <br> 
                                 <b>Função ou cargo ocupado: </b>${expEdFisica.job} <br>
                                 <b>Principais actividades e responsabilidades: </b>${expEdFisica.jobActivite} <br>
                                 <b>Local: </b>${expEdFisica.place} <br>
@@ -101,7 +101,7 @@
                     <ul id="ExpOutros">
                         <c:forEach var="expMonitor" items="${expMonitor}"> 
                             <li>
-                                <b>Datas: </b>${expMonitor.date} <br> 
+                                <b>Datas: </b>${expMonitor.dateStart}-${expMonitor.dateLeft}<br> 
                                 <b>Função ou cargo ocupado: </b>${expMonitor.job} <br>
                                 <b>Principais actividades e responsabilidades: </b>${expMonitor.jobActivite} <br>
                                 <b>Local: </b>${expMonitor.place} <br>
