@@ -10,16 +10,20 @@ public class DateFactory {
 
     public static Date factoryDates(String str) {
         String[] a = refactorSring(str);
+
         Date data = null;
         for (String a1 : a) {
             String trim = a1.trim();
         }
+        System.out.println(a.length);
         if (a.length == 1) {
+            System.out.println("deeeeedf");
             data = new DateAno(Integer.parseInt(a[0]));
-        }
-        if (a.length == 2) {
+
+        } else if (a.length == 2) {
             data = new DateAnoMes(Integer.parseInt(a[0]), Integer.parseInt(a[1]));
         } else {
+
             throw new UnsupportedOperationException(
                     "You are passing a date that is correspond to the requisites");
         }
