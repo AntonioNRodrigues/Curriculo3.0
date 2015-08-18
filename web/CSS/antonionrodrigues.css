@@ -1,0 +1,772 @@
+/* 
+    Document   : antonionrodrigues
+    Created on : 2/Abr/2013, 21:29:28
+    Author     : Antonio Rodrigues
+    Description: Stylesheet for the site www.antonionrodrigues.com.
+*/
+
+/****************************************************
+ *                                                  *                
+ *             FrontPage CSS                        *            
+ *                                                  *        
+ *                                                  *                
+ *                                                  *           
+ ****************************************************/
+@import url(http://fonts.googleapis.com/css?family=Oswald:400);
+#frontPage{
+    position:fixed;
+    top:0; bottom:0; left:0; right:0;
+    background-color: #000;
+    margin: 0;
+    width: 100%;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+}
+#imagemBackground {
+    position: static;
+    max-width: 70%; /*1056px*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+#imagemJavaWork, #imagemPCurriculum, #imagemAboutMe{
+    position: static;
+    max-width: 62%; 
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    border: 3px solid #CD6600;
+
+}
+#linksEntrada{
+
+}
+#linksEntrada a{
+    color:orange;
+    background-color: #000;
+    padding: 0 2% 0 2%;
+    position: relative; 
+    max-width: 20%;
+    height: auto;
+    left: 20%;
+    color: #ff8f00;
+    text-align: center;
+    margin: auto 2%;
+    font-size: 37px;
+    font-weight: normal;
+    text-decoration: none;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    text-transform: uppercase;
+}
+#linksEntrada a:hover{
+    background-color: #ff8f00;
+    color:#000;
+    transition: all ease-in-out 2s; 
+}
+
+#footerFrontPage{ 
+    background-color: black;
+    left: 0;
+    right: 0;
+    position:fixed;
+    bottom: 0;
+    border-top-width: thick;
+    border-top: 3px #ff8f00 groove;
+    margin-top: 0%;
+
+}
+#footerFrontPage p{               
+    text-align: end;
+    margin-right: 1%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    
+}
+#footerFrontPage a{
+    color: orange;
+    text-decoration: none;
+    font-size: 14px;
+   
+}
+/****************************************************
+ *                                                  *                
+ *               AboutMe CSS                        *            
+ *                                                  *        
+ *                                                  *                
+ *                                                  *           
+ ****************************************************/
+
+#aboutMe{
+    background-color: #000;
+    font-family: sans-serif; 
+    font-size: 90%; 
+    line-height: 1.2em; 
+    width: auto;
+    height: auto;
+    margin: 0;
+    font-weight: normal;
+}
+
+#imagemBackgroundAboutMe{
+    height: 80%;
+    width: 100%;
+    min-height: 80%; 
+    min-width: 1024px; 
+    position: fixed;
+    top:0;
+    right: 0;
+
+}
+
+#blocoCentral{
+    display: block;
+    position: relative;
+    height: 400px;
+    width: 650px;
+    margin-left:5%;
+    margin-top: 5%;
+    /*background-color:#cccccc; */
+    padding: 10px 10px 10px 10px;
+    /*filter: alpha(opacity=60);
+    opacity: .7;*/
+    text-align: justify; 
+}
+
+#blocoCentral #texto{
+    position: relative;
+    color: #ffffff;
+    text-align: justify;
+    font-family: proxima-nova-1,proxima-nova-2,"proxima",Tahoma,Helvetica,Verdana,sans-serif;
+    color: #000;
+    font-size: 20px;
+    line-height: 30px;
+    filter: alpha(opacity=100);
+    opacity: 1;
+
+}
+
+#CapaDivAboutMe, #CvDivAboutMe, #JavaDivAboutMe{
+
+    position:fixed;
+    width: 20px;
+    right: 0; 
+    height: 50px;
+    background-color: #333333;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 10px;
+
+    box-shadow: inset 0px 4px 5px rgba(255,255,255,0.4),
+        inset 0px -1px 5px rgba(255,255,255,0.2),	                         
+        0px 8px 0px #ffffff,
+        0px 9px 5px rgba(0,0,0,0.5);
+
+    -moz-box-shadow:  inset 0px 4px 5px rgba(255,255,255,0.4),
+        inset 0px -1px 5px rgba(255,255,255,0.2),
+        0px 8px 0px #ffffff,
+        0px 9px 5px rgba(0,0,0,0.5);
+
+    -webkit-box-shadow: inset 0px 4px 5px rgba(255,255,255,0.4),
+        inset 0px -1px 5px rgba(255,255,255,0.2),
+        0px 8px 0px #ffffff,
+        0px 9px 5px rgba(0,0,0,0.5);
+
+}
+#CvDivAboutMe{
+    top:45%;
+}
+#CapaDivAboutMe{
+    top:35%;
+}
+#JavaDivAboutMe{
+    top:55%; 
+}
+
+#CapaAboutMe, #JavaAboutMe, #CvAboutMe{
+    position: inherit;
+    color:#ffffff;
+    text-align: center;
+    font-family: Trebuchet MS,Helvetica,sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+    padding-top: 10px;
+
+}
+#CapaAboutMe{
+    top:36%;
+}
+#JavaAboutMe{
+    top:56%;     
+}
+#CvAboutMe{
+    top:46%;
+}
+
+footer { 
+    background-color: #cccccc;
+    left: 0;
+    right: 0;
+    position: fixed;
+    bottom: 0;
+    border-top-width: thin;
+    border-top: 5px #ff8f00 groove;
+    margin-top: 0%;
+
+}
+footer p{
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    text-align: end;
+    font-size: 100%;
+    margin-right: 15px;
+}
+footer a{
+    font-size: 110%;
+    color: #000;
+    text-decoration: none;
+
+}
+
+/* Não utilizado no entanto pronto juntamente com o bloco2 
+* do AbouteMe.JSP e as funções definidas em antonionrodrigues.js 
+* para formar uma menu com datas, que ao serem sobrevoadas, 
+* desaparace o conteudo do blocoCentral e aparece o conteudo 
+* correspondente a cada ano.
+
+#bloco2{
+        height: auto;
+        width: 100%;
+        top: 85%;
+        left: 0;
+        right: 0;
+        color: white;
+        background: #000;
+        position: fixed;
+        text-align: center;
+}
+
+        #bloco2 ul{
+                 margin-top: 0;
+                        }
+                #bloco2 ul li{
+                        top:0;
+                        position: relative;
+                        margin-top:0;
+                        display: inline-block;
+                        width: 100px;
+                             
+                        }
+                        #bloco2 ul li a{
+                                
+                                font-size: 1.4em;
+                                font-family: 'Finger Paint', cursive;
+                                text-align: center;   
+                                margin-top: 0;
+                                height: 10px;
+                                width: 60px;
+                                padding: 20px;
+                                position: fixed;
+                                background: #000;
+                                color: white;
+                                text-decoration: none;
+                                
+                        }
+                        #bloco2 ul li a:hover{
+                                background-color: #000;
+                                
+                                
+                        }
+                       
+                        #bloco2 ul li a:active{ 
+                            background-color: #666; }
+                                #nav ul li a{
+                                        background-color: black;
+                                }
+
+#ul li a{ box-shadow: 0px 1px 1px #999; }
+
+#milNove, #doisDez, #doisCinco, #doisDoze, #doisNove, #doisOito, #doisOnze, #doisSeis, #doisSete{
+    position: fixed;
+    border-style: outset;
+    display: none;
+    height: 400px;
+    width: 650px;
+    margin-left:5%;
+    margin-top: 5%;
+    background-color:#cccccc; 
+    padding: 10px 10px 10px 10px;
+    filter: alpha(opacity=60);
+    opacity: .4;
+    text-align: justify; 
+}
+*/
+
+/****************************************************
+ *                                                  *                
+ *           Work_in_Java JavaScript                *            
+ *                                                  *        
+ *                                                  *                
+ *                                                  *           
+ ****************************************************/
+
+
+#workJava{
+    background-color: #ffffff;
+    font-family: sans-serif; 
+    font-size: 90%; 
+    line-height: 1.2em; 
+    width: auto; 
+    margin: 0; 
+    background: #eee;
+    font-weight: normal;
+    display: run-in;
+}
+
+#headWorkJava {
+    padding: 20px;
+    position: relative;
+    right: 0;
+    top:0;
+    left: 0;        
+    height: auto;
+    background: #222;
+    color:white;
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+
+}
+#headWorkJava #namePage{
+    position: relative;
+    margin-left: 25px;
+    color: orange;
+}
+#headWorkJava #namePage i{
+    font-size: 40px; color: orange;
+}
+#headWorkJava #namePage p{
+    font-size: 15px; 
+    line-height: 1.2em;
+    color: white; 
+    letter-spacing: 2px;
+}
+#headWorkJava #name{
+    width: auto;
+    float: right;
+    top:20px;
+    right: 15px;
+    position: absolute;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+
+}
+#headWorkJava h1 {
+
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+#headWorkJava #name dl{
+    padding-left: 30px;
+    margin: 0 0 10px 0;
+    font-family: "Georgia", serif;
+    font-size: 15px;
+    line-height: 1.2em;
+}
+#headWorkJava #name dl em{
+    color: #ff8f00;
+}
+#headWorkJava #name dl dt{
+    color: #ffffff;
+}
+#headWorkJava #name dl a img{
+    width: 10%;
+}
+.clear{clear: both;}
+
+#mainContent{
+
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-left:2%;
+    top:auto;
+    margin-bottom: 5%;
+    width: auto;
+    height: auto;
+
+}
+#mainContent article{
+    position: relative;
+    border-radius: 4px 4px 4px 4px;
+    text-align: center;
+    display: inline-table;
+    background-color: white;    
+    padding: 2%;
+    margin: 2%;
+    left: 4%;
+    right: 4%;
+    border-color: rgb(221, 221, 221);
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    max-width: 500px; 
+    min-width: 500px;
+    float: left;
+    /*box-shadow: inset 0px 4px 5px rgba(255,255,255,0.4),
+                                inset 0px -1px 5px rgba(255,255,255,0.2),	                         
+                                0px 8px 0px #c0c0c0,
+                                0px 9px 5px rgba(0,0,0,0.5);
+     
+    -moz-box-shadow:  inset 0px 4px 5px rgba(255,255,255,0.4),
+                                inset 0px -1px 5px rgba(255,255,255,0.2),
+                                0px 8px 0px #c0c0c0,
+                                0px 9px 5px rgba(0,0,0,0.5);
+     
+-webkit-box-shadow: inset 5px 4px 5px rgba(255,255,255,0.4),
+                                inset 5px -1px 5px rgba(255,255,255,0.2),
+                                0px 5px 0px #c0c0c0,
+                                0px 3px 5px rgba(0,0,0,0.5);
+    */}
+#mainContent article h1{
+    color: #222;
+    text-align: center;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+
+}
+#mainContent article h3{
+    color: #222;
+    text-align: center;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    margin-top: 4%;
+    padding: 2%;
+    border: 3px solid #CD6600;
+    background: #CD6600;
+    background: radial-gradient(#CD6600, #333333);
+}
+#mainContent article p{
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+#mainContent article button, #mainContent article .buttonCodingbat{
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    border: 2px solid #CD6600 ;
+    background-color: #eee;
+    position:  relative;
+    margin: 1%;
+    border-radius: 0%;
+    padding: 2%;
+    min-width: 200px;
+}
+#mainContent article button:hover, #mainContent article .buttonCodingbat:hover,
+#mainContent article #estrelaCode:hover, #mainContent article #numCode:hover, 
+#mainContent article #gerarCodigo:hover{
+    background-color: #cccccc;
+}
+#mainContent article #aGitHub{
+    position: static;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    font-size: 1.1em;
+    text-decoration: none;   
+    color:#CD6600;
+}
+
+#imagemSite{
+    border: 3px solid #CD6600;
+    width: 100%;
+}
+#imagemSite:hover{
+    border: 5px solid #CD6600;
+    width: 99%;
+}
+#mainContent article #imagemCodingBat, #mainContent article #euro{
+    border: 3px solid #CD6600;
+    width: 100%;
+    background-color: black;
+    padding-bottom: 10%;
+    background: #CD6600;
+    background: radial-gradient(#CD6600, #333333);
+}
+#mainContent article #imagemCodingBat:hover, #mainContent article #euro:hover{
+    color: #333333;
+}
+
+#mainContent article #listaNumEstrela{
+    font-size: 1.2em;
+    text-align: center;
+}
+#mainContent article #estrelaCode, #mainContent article #numCode{
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    border: 2px solid #CD6600 ;
+    background-color: #eee;
+    position:  relative;
+    margin: 1%;
+    border-radius: 0%;
+    padding: 2%;
+    min-width: 100px;
+}
+#mainContent article #gitHub {
+    border: 3px solid #333333;
+    text-decoration: none;
+    text-align: right;
+    color:#CD6600;
+}
+#mainContent article #gerarCodigo{
+    padding:0;
+    margin:0;
+    border:none;
+    min-width: 0;
+    background-color: white;
+}
+
+.fadeInFadeOut, .fadeInFadeOut1, .fadeInFadeOut2, .fadeInFadeOut3{
+    position: absolute;
+    width:0; 
+    height:0; 
+    top: 100%;
+    left: 44%;  
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #999;
+    border-bottom: 0px solid #999;
+}
+.fadeInFadeOut2{
+    top:96.5%;
+    border-top: 0px solid #999;
+    border-bottom: 10px solid #999;
+}
+
+#footerWorkJava{
+
+    background-color: #cccccc;
+    position: relative;
+    border-top-width: thin;
+    border-top: 5px #ff8f00 groove;
+    margin-top: 160%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+
+}
+#footerWorkJava p{
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    text-align: end;
+    font-size: 100%;
+    color: #000;
+    margin-right: 15px;
+}
+#footerWorkJava a{
+    font-size: 110%;
+    color:#000;
+    text-decoration: none;
+}
+
+#SobreDiv, #CapaDiv, #CvDiv{
+
+    position:fixed;
+    width: 20px;
+    right: 0; 
+    height: 50px;
+    background-color: #000;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 10px;
+
+    box-shadow: inset 0px 4px 5px rgba(255,255,255,0.4),
+        inset 0px -1px 5px rgba(255,255,255,0.2),	                         
+        0px 8px 0px #CD6600,
+        0px 9px 5px rgba(0,0,0,0.5);
+
+    -moz-box-shadow:  inset 0px 4px 5px rgba(255,255,255,0.4),
+        inset 0px -1px 5px rgba(255,255,255,0.2),
+        0px 8px 0px #CD6600,
+        0px 9px 5px rgba(0,0,0,0.5);
+
+    -webkit-box-shadow: inset 0px 4px 5px rgba(255,255,255,0.4),
+        inset 0px -1px 5px rgba(255,255,255,0.2),
+        0px 8px 0px #CD6600,
+        0px 9px 5px rgba(0,0,0,0.5);
+
+}
+#SobreDiv{
+    top:45%;
+}
+#CapaDiv{
+    top:35%;
+}
+#CvDiv{
+    top:55%; 
+}
+
+#Capa, #Cv, #Sobre{
+    position: inherit;
+    color:orange;
+    text-align: center;
+    font-family: Trebuchet MS,Helvetica,sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+    padding-top: 10px;
+
+}
+#Capa{
+    top:36%;
+}
+#Cv{
+    top:56%;     
+}
+#Sobre{
+    top:46%;
+}
+
+h1, h2, h3, h4{
+    color: orange;
+    font-weight: normal;
+    line-height: 1.1em;
+    margin: 0 0 .5em 0;
+}
+
+/****************************************************
+ *                                                  *                
+ *           PageCurriculum javaScript               *            
+ *                                                  *        
+ *                                                  *                
+ *                                                  *           
+ ****************************************************/
+
+#bodyPageCurriculum{
+    font-family: sans-serif; 
+    font-size: 90%; 
+    line-height: 1.2em; 
+    width: 100%; 
+    margin: 0; 
+    background: #eee;
+    font-weight:normal;
+}
+
+#content{
+
+    width: auto;  
+    height: auto;
+    margin: 30px 0;
+    background: white;
+    padding-left: 10px;
+    left:0;
+    position:fixed;
+    top: 130px;
+    background-color: #eee;
+
+}    
+
+#content, ul li a{ 
+    box-shadow: 0px 1px 1px #999; 
+}    
+
+
+#content #barraNavegacao{
+    left:1px;    
+    position: fixed;
+    top: 11%;
+    text-align: justify;
+    background-color: black;
+    height: 100%;
+    width: 200px;
+    padding:10px;
+
+}
+
+#content #barraNavegacao li{
+    list-style-type: none;
+    display: list-item;
+    margin-left: 0px;
+    margin-top: 5px;
+    padding-top: 5px;
+    /* border-left: 7px #ff8f00 groove;
+     border-bottom: 7px #ff8f00 groove;
+    */
+}
+#content #barraNavegacao #dif{
+    margin-left: -10px;
+    color: orange;
+}
+
+
+#content #barraNavegacao li a{
+
+    color: white;
+    text-decoration: none;
+}
+#content #barraNavegacao #tituloBarraNav1,  #content #barraNavegacao #tituloBarraNav2, #content #barraNavegacao #tituloBarraNav3{
+    color: #ff8f00;
+    font-size: larger;
+    margin-left: -20px;
+    margin-top: 15px;
+    padding-top: 5px;
+
+}    
+
+
+#content2{
+    left: 180px;
+    position: fixed;
+    top: 80px;
+    height: 85%;
+    width: 87%;
+    overflow-y: scroll;
+}
+#content2 #ExpDocente, #content2 #ExpNatacao, #content2 #ExpOutros, #content2 #FormCursosProg ,#content2 #FormCursosDesp , #content2 #FormSup {
+
+    float:start;
+
+}
+#content2 #ExpDocente li:hover, #content2 #ExpOutros li:hover, #content2 #FormCursosProg li:hover ,#content2 #FormCursosDesp li:hover, #content2 #ExpNatacao li:hover,  #content2 #FormSup li:hover{
+    background-color: white; 
+    transform: scale(1.1,1.1);
+    transform-origin: 0%;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+    -ms-transform: scale(1.1,1.1);; /* IE 9 */
+    -ms-transform-origin:0%; /* IE 9 */
+    -webkit-transform: scale(1.1,1.1);; /* Safari and Chrome */
+    -webkit-transform-origin:0%; /* Safari and Chrome */
+    -moz-transform: scale(1.1,1.1);; /* Firefox */
+    -moz-transform-origin:0%; /* Firefox */
+    -o-transform: scale(1.1,1.1);; /* Opera */
+    -o-transform-origin: 0%; /* Opera */
+
+}           
+#content2 #ExpDocente li, #content2 #ExpOutros li, #content2 #FormCursosProg li ,#content2 #FormCursosDesp li, #content2 #ExpNatacao li,  #content2 #FormSup li{
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    color: #000;
+    border-color: #CD6600;
+    border-left-width: 30px;
+    padding: 10px;
+    border-style: solid;
+    margin-top:auto;
+    display: inline-table;
+    height: 125px;
+    width:  70%;
+    list-style: none;
+    text-align: justify;
+    margin-left: 20px;
+    margin-bottom: 10px;
+
+}   
+
+
+h1, h2, h3, h4{
+    color: orange;
+    font-weight: normal;
+    line-height: 1.1em;
+    margin: 0 0 .5em 0;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,406 @@
+/* 
+    Document   : antonionrodrigues
+    Created on : 13/Fev/2014
+    Author     : Antonio Rodrigues
+    Description: Stylesheet for the site www.antonionrodrigues.com.
+*/
+
+
+/****************************************************
+ *                                                  *                
+ *            Footer                                *            
+ *                                                  *        
+ *                                                  *                
+ *                                                  *           
+ ****************************************************/
+
+@import url(http://fonts.googleapis.com/css?family=Oswald:400);
+
+footer{
+    background-color: #eeeeee;
+    position: relative;
+    border-top-width: thin;
+    border-top: 5px #ff8f00 groove;
+    width: 100%;
+    bottom: 0px;
+    height: auto;
+    padding-bottom: 5px;
+}
+footer p{
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    text-align: end;
+    margin-right: 15px;
+}
+footer a{
+    font-size: 110%;
+    color:#000;
+    text-decoration: none;
+}
+/****************************************************
+ *                                                  *                
+ *            Header                                *            
+ *                                                  *        
+ *                                                  *                
+ *                                                  *           
+ ****************************************************/
+
+header {
+    padding-left: 5px;
+    position: relative;// make this not move just set the element to fixed ----> later
+    right: 0;
+    top:0;
+    left: 0;        
+    height: auto;
+    width: 100%;
+    background: #222;
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+}
+
+
+header h1{
+    color: #FFA500;
+    margin-top: 0%;
+    position: relative;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    font-size: 32px;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+    font-weight: normal;
+
+}
+
+header dl{
+    padding-top: 0; 
+    padding-left: 10px;
+    margin: 0 0 10px 0;
+    line-height: 1.2em;
+}
+#SocialMedia2{
+    position: fixed;
+    left: 0%;
+    top:65px;
+}
+
+header img{
+    width: 28px;
+}
+header #links{
+    top:20px;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    font-size: 24px;
+    float: right;
+    position: absolute;
+    right: 3px;
+
+
+}
+header #links a{
+    color:white;
+    text-decoration: none;
+    padding-right: 1em;
+    padding-left: 1em;
+
+}
+
+
+/****************************************************
+*                                                  *                
+*            Menus                                 *            
+*                                                  *        
+*                                                  *                
+*                                                  *           
+****************************************************/
+
+#Education, #CvDivAboutMe, #JavaDivAboutMe{
+
+    position:fixed;
+    width: 20px;
+    right: 0; 
+    height: 50px;
+    background-color: #333333;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 10px;
+
+    box-shadow: inset 0px 4px 5px rgba(255,255,255,0.4),
+        inset 0px -1px 5px rgba(255,255,255,0.2),	                         
+        0px 8px 0px #ffffff,
+        0px 9px 5px rgba(0,0,0,0.5);
+
+    -moz-box-shadow:  inset 0px 4px 5px rgba(255,255,255,0.4),
+        inset 0px -1px 5px rgba(255,255,255,0.2),
+        0px 8px 0px #ffffff,
+        0px 9px 5px rgba(0,0,0,0.5);
+
+    -webkit-box-shadow: inset 0px 4px 5px rgba(255,255,255,0.4),
+        inset 0px -1px 5px rgba(255,255,255,0.2),
+        0px 8px 0px #ffffff,
+        0px 9px 5px rgba(0,0,0,0.5);
+
+}
+#CvDivAboutMe{
+    top:45%;
+}
+#Eduction{
+    top:35%;
+}
+#JavaDivAboutMe{
+    top:55%; 
+}
+
+#EductionID, #JavaAboutMe, #CvAboutMe{
+    position: inherit;
+    color:#ffffff;
+    text-align: center;
+    font-family: Trebuchet MS,Helvetica,sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+    padding-top: 10px;
+
+}
+#CapaAboutMe{
+    top:36%;
+}
+#EductionID{
+    top:56%;     
+}
+#CvAboutMe{
+    top:46%;
+}
+
+
+/****************************************************
+*                                                  *                
+*           Page -  CV                             *            
+*                                                  *        
+*                                                  *                
+*                                                  *           
+****************************************************/
+
+
+#bodyPageCurriculum{
+    background-color: white; 
+}
+
+#barraNavegacao li{
+    padding: 5px;
+    list-style-type: none;
+}
+#content2{
+    left: 120px;
+}
+#content #barraNavegacao #dif{
+    margin-left: 10px;
+    font-style: italic;
+}
+#content #barraNavegacao li a{
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+}
+#tituloBarraNav1, #tituloBarraNav2, #tituloBarraNav3{
+    font-size: 1.2em;
+}
+
+#content2 li{
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+    color: #000;
+    border-color: #CD6600;
+    border-left-width: 30px;
+    padding: 10px;
+    border-style: solid;
+    margin-top:auto;
+    display: inline-table;
+    height: auto;
+    width:  100%;
+    list-style: none;
+    text-align: justify;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+#content #barraNavegacao{
+    position: fixed;
+}
+
+
+/****************************************************
+*                                                  *                
+*           Page -  Projects                       *            
+*                                                  *        
+*                                                  *                
+*                                                  *           
+****************************************************/
+body{
+    background-color: #eee;
+    padding-top: 50px;
+}
+
+#mainContent{
+    margin-top: 1%;
+
+}
+#mainContent article{
+    border-radius: 4px 4px 4px 4px;
+    text-align: center;
+    background-color: white;    
+    padding: 2%; 
+    margin-left: 1%; 
+    margin-top: 2%; 
+    margin-right: 1%; 
+    margin-bottom: 1%; 
+    border-color: rgb(221, 221, 221); 
+    border-radius: 4px; 
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    max-width: 500px; 
+    min-width: 500px;
+
+}
+#mainContent #especialNumber4{
+    max-width: 750px; 
+    min-width: 750px;
+
+}
+#mainContent #SocialMedia{
+    border-radius: 4px 4px 4px 4px;
+    background-color: white;    
+    padding: 1%;
+    margin: 2%;
+    border-color: rgb(221, 221, 221);
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+
+}
+
+#mainContent article h1{
+    color: #222;
+    text-align: center;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+
+}
+#mainContent article h3{
+    color: #222;
+    text-align: center;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    margin-top: 4%;
+    padding: 2%;
+    border: 3px solid #CD6600;
+    background: #CD6600;
+    background: radial-gradient(#CD6600, #333333);
+}
+#mainContent article p{
+    text-align: justify;
+    line-height: 1.5em;
+}
+#mainContent article p i{
+    font-size: 12px;
+}
+
+#mainContent article button{
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    border: 2px solid #CD6600 ;
+    background-color: #eee;
+    position:  relative;
+    margin: 1%;
+    border-radius: 0%;
+    padding: 1%;
+    min-width: 200px;
+}
+#mainContent article button:hover{
+    background-color: #cccccc;
+}
+#mainContent article #aGitHub{
+    position: static;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    font-size: 1.1em;
+    text-decoration: none;   
+    color:#CD6600;
+}
+
+#imagemSite{
+    border: 3px solid #CD6600;
+    width: 100%;
+}
+#imagemSite:hover{
+    border: 5px solid #CD6600;
+    width: 99%;
+}
+#bodyPageCurriculum{
+    padding-top: 90px;
+}
+
+/****************************************************
+*                                                  *                
+*           Page -  Projects CommentsMenu          *            
+*                                                  *        
+*                                                  *                
+*                                                  *           
+****************************************************/
+#insertComments{
+    margin-top: 5%;
+    margin-bottom: 11%;
+}
+#insertComments #nameCommentator, #commentCommentator{ 
+    width: 100%;
+    text-align: left;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    border-radius: 4px 4px 4px 4px;
+    padding: 1%;
+    margin-bottom: 1%;
+    color: #000; 
+}
+
+#insertComments #buttonComment,  #insertComments #buttonClose{
+    background-color: #eeeeee;
+    padding: 1px;
+    min-width: 10%;
+    border: 1px solid #CD6600;
+    float: right;
+}
+
+#counterArticle{
+    border: 1px solid #666666;
+    background: radial-gradient(#ffffff, #cccccc);
+    border-radius: 4px 4px 4px 4px;
+    width: 40px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    color: #999999; 
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    font-size: 25px;
+}
+
+#insertComments ~ div{
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+    width: 100%;
+}
+time{
+    color: #cccccc;
+    position: absolute;
+    right: 5%;
+}
+
+h5{
+    color: #000;
+    font-weight: bold;
+    position: absolute;
+    left: 5%;
+}
+time ~ p{
+     color: #111111;
+     padding-top: 7%;
+}
