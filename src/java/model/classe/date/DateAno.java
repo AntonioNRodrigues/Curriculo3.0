@@ -9,7 +9,7 @@ package model.classe.date;
  *
  * @author antonio
  */
-public class DateAno extends Date {
+class DateAno extends Date {
 
     public DateAno(int ano) {
         super(ano);
@@ -28,6 +28,11 @@ public class DateAno extends Date {
             resulCompare = i.compareTo(ii);
         }
         return resulCompare;
+    }
+
+    @Override
+    public String toString() {
+        return this.getYear() + "";
     }
 
 }
