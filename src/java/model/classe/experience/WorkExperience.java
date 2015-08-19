@@ -6,7 +6,6 @@ package model.classe.experience;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -80,7 +79,7 @@ public class WorkExperience {
                 lista.add(exp);   
             }
         }
-        Experience.compDateFim comparator=  new Experience.compDateFim();
+        Experience.compDifBigExperience comparator=  new Experience.compDifBigExperience();
         Collections.sort(lista, comparator);
         return lista;
     }
