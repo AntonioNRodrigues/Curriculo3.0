@@ -180,23 +180,55 @@ public abstract class Experience implements Comparable<Experience> {
     }
 
     /**
-     * comparator AINDA POR FAZER
+     * 
      */
     static class compDifBigExperience implements Comparator<Experience> {
 
         @Override
         public int compare(Experience exp1, Experience exp2) {
-
-            return 0;
+            Integer timeExp1 = calcTempo(exp1);
+            Integer timeExp2 = calcTempo(exp2);
+            return timeExp1.compareTo(timeExp2);
         }
 
-    }
+        private int calcTempo(Experience exp) {
+            int tempo = 0;
+            tempo += (exp.getDateLeft().getYear() - exp.getDateStart().getYear()) * 365;
+            System.out.println(tempo);
+            tempo += calcMonthUntilEndOftheYear(exp.dateLeft.getMonth());
+            System.out.println(tempo);
+            tempo += calcMonthUntil(exp.dateStart.getMonth());
+            return tempo;
+        }
 
-    private int calcTempo() {
-        int tempo = 0;
-        tempo = this.dateLeft.getYear() - this.dateStart.getYear() * 365;
-        //FALTA CALCULAR OS MESES----------------------
-        return tempo;
+        private int calcMonthUntil(int month) {
+            int calc = 0;
+            for (int i = month; i > 0; i--) {
+                calc += caldias(i);
+            }
+            return calc;
+        }
+
+        private int calcMonthUntilEndOftheYear(int month) {
+            int calc = 0;
+            for (int i = 0; i < month; i++) {
+                calc += caldias(i);
+            }
+            return calc;
+        }
+
+        private int caldias(int m) {
+            int dias;
+            if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) {
+                dias = 31;
+            } else if (m == 2) {
+                dias = 31;
+            } else {
+                dias = 30;
+            }
+            return dias;
+        }
+
     }
 
     /**
