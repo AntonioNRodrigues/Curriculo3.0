@@ -167,9 +167,9 @@ public abstract class Education implements Comparable<Education>, Comparator<Edu
 
     @Override
     public int compareTo(Education education) {
-        Integer aux = this.dateStart.getYear();
+        Integer thisEdu = this.dateStart.getYear();
         Integer edu = education.getDateStart().getYear();
-        return aux.compareTo(edu);
+        return thisEdu.compareTo(edu);
 
     }
 }
