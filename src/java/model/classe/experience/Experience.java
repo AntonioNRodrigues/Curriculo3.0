@@ -2,6 +2,7 @@
  */
 package model.classe.experience;
 
+import java.util.Comparator;
 import model.classe.date.Date;
 import java.util.Objects;
 import model.classe.date.DateFactory;
@@ -11,7 +12,7 @@ import model.classe.date.DateFactory;
  * @author Antonio Rodrigues
  * @date 2015/07/29
  */
-public abstract class Experience {
+public abstract class Experience implements Comparable<Experience> {
 
     private Date dateStart;
     private Date dateLeft;
@@ -152,6 +153,60 @@ public abstract class Experience {
         return "Experience{" + "dateStart=" + dateStart + ", dateLeft="
                 + dateLeft + ", jobActivite=" + jobActivite + ","
                 + "place=" + place + '}';
+    }
+
+    /**
+     *
+     */
+    static class compDateInicio implements Comparator<Experience> {
+
+        @Override
+        public int compare(Experience exp1, Experience exp2) {
+            return exp1.getDateStart().compareTo(exp2.getDateStart());
+        }
+
+    }
+
+    /**
+     *
+     */
+    static class compDateFim implements Comparator<Experience> {
+
+        @Override
+        public int compare(Experience exp1, Experience exp2) {
+            return exp1.getDateLeft().compareTo(exp2.getDateLeft());
+        }
+
+    }
+
+    /**
+     * comparator AINDA POR FAZER
+     */
+    static class compDifBigExperience implements Comparator<Experience> {
+
+        @Override
+        public int compare(Experience exp1, Experience exp2) {
+
+            return 0;
+        }
+
+    }
+
+    private int calcTempo() {
+        int tempo = 0;
+        tempo = this.dateLeft.getYear() - this.dateStart.getYear() * 365;
+        //FALTA CALCULAR OS MESES----------------------
+        return tempo;
+    }
+
+    /**
+     *
+     * @param exp
+     * @return
+     */
+    @Override
+    public int compareTo(Experience exp) {
+        return this.dateStart.compareTo(exp.dateStart);
     }
 
     /**

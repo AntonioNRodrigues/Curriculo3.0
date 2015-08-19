@@ -28,6 +28,5 @@ public class ExperienceTeacher extends Experience {
     public void setJob(String job) {
         this.job = job;
     }
-     
 
 }

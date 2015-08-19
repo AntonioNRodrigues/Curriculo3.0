@@ -5,7 +5,10 @@ package model.classe.experience;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -52,13 +55,14 @@ public class WorkExperience {
      */
     public Collection<Experience> listaExpDocencia() {
 
-        Collection<Experience> lista = new ArrayList<>();
+        List<Experience> lista = new ArrayList<>();
         for (Experience exp : catExperiencies.values()) {
             if (exp instanceof ExperienceTeacher) {
                 lista.add(exp);
-                System.out.println(exp.toString());
             }
-        }
+        }     
+        Experience.compDateInicio comparator=  new Experience.compDateInicio();
+        Collections.sort(lista, comparator);
         return lista;
     }
 
@@ -70,13 +74,14 @@ public class WorkExperience {
 
     public Collection<Experience> listaExpSports() {
 
-        Collection<Experience> lista = new ArrayList<>();
+        List<Experience> lista = new ArrayList<>();
         for (Experience exp : catExperiencies.values()) {
             if (exp instanceof ExperienceSports) {
-                lista.add(exp);
-                
+                lista.add(exp);   
             }
         }
+        Experience.compDateFim comparator=  new Experience.compDateFim();
+        Collections.sort(lista, comparator);
         return lista;
     }
 }
