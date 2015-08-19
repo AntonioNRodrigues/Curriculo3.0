@@ -15,9 +15,8 @@ public class DateFactory {
         for (String a1 : a) {
             String trim = a1.trim();
         }
-        System.out.println(a.length);
+        System.out.println(a[0]);
         if (a.length == 1) {
-            System.out.println("deeeeedf");
             data = new DateAno(Integer.parseInt(a[0]));
 
         } else if (a.length == 2) {
