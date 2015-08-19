@@ -4,8 +4,8 @@
 package model.classe.experience;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -50,9 +50,9 @@ public class WorkExperience {
      *
      * @return list
      */
-    public List<Experience> listaExpDocencia() {
+    public Collection<Experience> listaExpDocencia() {
 
-        ArrayList<Experience> lista = new ArrayList<>();
+        Collection<Experience> lista = new ArrayList<>();
         for (Experience exp : catExperiencies.values()) {
             if (exp instanceof ExperienceTeacher) {
                 lista.add(exp);
@@ -68,9 +68,9 @@ public class WorkExperience {
      * @return list
      */
 
-    public List<Experience> listaExpSports() {
+    public Collection<Experience> listaExpSports() {
 
-        ArrayList<Experience> lista = new ArrayList<>();
+        Collection<Experience> lista = new ArrayList<>();
         for (Experience exp : catExperiencies.values()) {
             if (exp instanceof ExperienceSports) {
                 lista.add(exp);
