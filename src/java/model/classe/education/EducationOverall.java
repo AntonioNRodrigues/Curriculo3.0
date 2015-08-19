@@ -6,7 +6,9 @@ package model.classe.education;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -46,46 +48,51 @@ public class EducationOverall {
         } else {
             return new SportProfessionalTraining(d, t, pS, nO);
         }
-
     }
+
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public Collection<Education> listaEducUniversitary() {
-        Collection<Education> col = new ArrayList<>();
+        List<Education> lista = new ArrayList<>();
         for (Education edu : catEducaion.values()) {
             if (edu instanceof EductionUniversitary) {
-                col.add(edu);
+                lista.add(edu);
             }
         }
-        return col;
+       Collections.sort(lista, Collections.reverseOrder());
+        return lista;
     }
+
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public Collection<Education> listaFormCode() {
-        Collection<Education> col = new ArrayList<>();
+        List<Education> lista = new ArrayList<>();
         for (Education edu : catEducaion.values()) {
             if (edu instanceof CodeProfessionalTraining) {
-                col.add(edu);
+                lista.add(edu);
             }
         }
-        return col;
+        Collections.sort(lista, Collections.reverseOrder());
+        return lista;
     }
-       /**
-        * 
-        * @return 
-        */
-    public Collection<Education> listaSportForm(){
-        Collection <Education> col = new ArrayList<>();
-        for(Education edu : catEducaion.values()){
-            if(edu instanceof EductionUniversitary){
-                col.add(edu);
+
+    /**
+     *
+     * @return
+     */
+    public Collection<Education> listaSportForm() {
+        List<Education> lista = new ArrayList<>();
+        for (Education edu : catEducaion.values()) {
+            if (edu instanceof SportProfessionalTraining) {
+                lista.add(edu);
             }
         }
-        return  col;
+        Collections.sort(lista, Collections.reverseOrder());
+        return lista;
     }
 
 }
