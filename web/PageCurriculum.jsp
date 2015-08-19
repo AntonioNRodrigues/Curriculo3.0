@@ -58,7 +58,7 @@
 
                     <ul id="FormCursosProg">
                         <c:forEach var="eduFormProg" items="${eduFormProg}"> 
-                            <li><b>Datas: </b>${eduFormProg.date} <br> 
+                            <li><b>Datas: </b>${eduFormProg.dateStart} <br> 
                                 <b>Designação da qualificação atribuída: </b>${eduFormProg.title} <br>
                                 <b>Principais disciplinas/competências profissionais: </b>${eduFormProg.principalSubjects} <br>
                                 <b>Entidade: </b>${eduFormProg.nameOrganisation} <br>
@@ -69,7 +69,7 @@
                     <ul id="FormSup">
                         <c:forEach var="eduSup" items="${eduSup}"> 
                             <li>
-                                <b>Datas: </b>${eduSup.date} <br> 
+                                <b>Datas: </b>${eduSup.dateStart} <br> 
                                 <b>Designação da qualificação atribuída: </b>${eduSup.title} <br>
                                 <b>Principais disciplinas/competências profissionais: </b>${eduSup.principalSubjects} <br>
                                 <b>Entidade: </b>${eduSup.nameOrganisation} <br>
@@ -79,7 +79,7 @@
 
                     <ul id="FormCursosDesp">
                         <c:forEach var="eduFormDesp" items="${eduFormDesp}"> 
-                            <li><b>Datas: </b>${eduFormDesp.date} <br> 
+                            <li><b>Datas: </b>${eduFormDesp.dateStart} <br> 
                                 <b>Designação da qualificação atribuída: </b>${eduFormDesp.title} <br>
                                 <b>Principais disciplinas/competências profissionais: </b>${eduFormDesp.principalSubjects} <br>
                                 <b>Entidade: </b>${eduFormDesp.nameOrganisation} <br>
