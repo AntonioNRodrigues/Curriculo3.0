@@ -23,7 +23,7 @@ import model.classe.FillCurriculo;
 @WebServlet(name = "ControladorPersonalPage", urlPatterns = {"/ControladorPersonalPage"})
 
 public class ControladorPersonalPage extends HttpServlet {
-    
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -39,34 +39,34 @@ public class ControladorPersonalPage extends HttpServlet {
 
         PrintWriter out = response.getWriter();
         try {
-            
-            FillCurriculo fc= new FillCurriculo();
+
+            FillCurriculo fc = new FillCurriculo();
             Curriculo c = new Curriculo(fc.getPF(), fc.getWorkExp(), fc.getEd());
-            
+
             //response to PageCurriculum.jsp
             RequestDispatcher rd
                     = request.getRequestDispatcher("PageCurriculum.jsp");
-            
+
             //personal information
             request.setAttribute("fullName", c.getPersInf().getFullName());
             request.setAttribute("Email", c.getPersInf().getEmail());
             request.setAttribute("phone", c.getPersInf().getMobilephone());
-            request.setAttribute("firstName", c.getPersInf().getFirstName()+" ");
+            request.setAttribute("firstName", c.getPersInf().getFirstName() + " ");
             request.setAttribute("lastName", c.getPersInf().getLastName());
 
             request.setAttribute("nac", c.getPersInf().getNationality());
             request.setAttribute("endT", c.getPersInf().getEndTwitter());
             request.setAttribute("endF", c.getPersInf().getEndFacebook());
             request.setAttribute("endL", c.getPersInf().getEndLinkedin());
-            
+
             //listas Experience
             request.setAttribute("expEdFisica", c.getWorkExp().listaExpDocencia());
             request.setAttribute("expMonitor", c.getWorkExp().listaExpSports());
-            
+
             //listas Education 
-            request.setAttribute("eduFormDesp", c.getEduc().getFormacaoDesp());
-            request.setAttribute("eduFormProg", c.getEduc().getFormacaoProg());
-            request.setAttribute("eduSup", c.getEduc().getFormSuperior());
+            request.setAttribute("eduFormDesp", c.getEduc().listaSportForm());
+            request.setAttribute("eduFormProg", c.getEduc().listaFormCode());
+            request.setAttribute("eduSup", c.getEduc().listaEducUniversitary());
 
             rd.forward(request, response);
 
