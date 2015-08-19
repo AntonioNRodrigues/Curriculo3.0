@@ -1,51 +1,50 @@
 /*
- * classe que organiza os objectos do tipo Education e coloca-os numa Lista 
+ * classe que organiza os objectos do tipo Education e coloca-os num Map 
  * consoante a sua caracteristica
  */
 package model.classe.education;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Antonio Rodrigues
  */
 public class EducationOverall {
 
-    private List<Education> formSuperior;
-    private List<Education> formacaoProg;
-    private List<Education> formacaoDesp;
+    private Map<Integer, Education> catEducaion;
 
     public EducationOverall() {
-        formSuperior = new ArrayList<>();
-        formacaoDesp = new ArrayList<>();
-        formacaoProg = new ArrayList<>();
+        this.catEducaion = new HashMap<>();
     }
-    /*método que recebe 4 argumentos e passa-os para a classe Education. 
+    /* método que recebe 4 argumentos e passa-os para a classe Education. 
      * Instancia esse classe criando uma objecto desse tipo e adiciona-o à 
      * Lista educ, que só recebe objectos desse tipo.  
      */
+
     public void addEducation(String d, String t, String pS, String nO) {
-        defineListaInsercao(new Education(d, t, pS, nO));
+        Education edu = factoryEducation(d, t, pS, nO);
+        catEducaion.put(edu.hashCode(), edu);
     }
-  
+
     /**
-     * 
-     * @param educ 
+     *
+     * @param d
+     * @param t
+     * @param pS
+     * @param nO
+     * @return
      */
-    private void defineListaInsercao(Education educ) {
+    private Education factoryEducation(String d, String t, String pS, String nO) {
 
-        if (educ.getTitle().startsWith("Licenciatura")
-                || educ.getTitle().startsWith("Pós-graduação")) {
-            formSuperior.add(educ);
-
-        } else if (educ.getNameOrganisation().startsWith("Academia de Java/Rumos")
-                || educ.getNameOrganisation().startsWith("Alta")
-                || educ.getNameOrganisation().startsWith("Oracle")) {
-            formacaoProg.add(educ);
-
+        if (t.startsWith("Licenciatura") || t.startsWith("Pós-graduação")) {
+            return new EductionUniversitary(d, t, pS, nO);
+        } else if (nO.startsWith("Academia") || nO.startsWith("Alta") || t.startsWith("Oracle")) {
+            return new CodeProfessionalTraining(d, t, pS, nO);
         } else {
-            formacaoDesp.add(educ);
+            return new SportProfessionalTraining(d, t, pS, nO);
         }
 
     }
@@ -53,43 +52,40 @@ public class EducationOverall {
      * 
      * @return 
      */
-    public List<Education> getFormSuperior() {
-        return formSuperior;
-    }
-    /**
-     * 
-     * @param formSuperior 
-     */
-    public void setFormSuperior(List<Education> formSuperior) {
-        this.formSuperior = formSuperior;
-    }
-    /**
-     * 
-     * @return 
-     */
-    public List<Education> getFormacaoProg() {
-        return formacaoProg;
-    }
-    /**
-     * 
-     * @param formacaoProg 
-     */
-    public void setFormacaoProg(List<Education> formacaoProg) {
-        this.formacaoProg = formacaoProg;
+    public Collection<Education> listaEducUniversitary() {
+        Collection<Education> col = new ArrayList<>();
+        for (Education edu : catEducaion.values()) {
+            if (edu instanceof EductionUniversitary) {
+                col.add(edu);
+            }
+        }
+        return col;
     }
     /**
      * 
      * @return 
      */
-    public List<Education> getFormacaoDesp() {
-        return formacaoDesp;
+    public Collection<Education> listaFormCode() {
+        Collection<Education> col = new ArrayList<>();
+        for (Education edu : catEducaion.values()) {
+            if (edu instanceof CodeProfessionalTraining) {
+                col.add(edu);
+            }
+        }
+        return col;
     }
-    /**
-     * 
-     * @param formacaoDesp 
-     */
-    public void setFormacaoDesp(List<Education> formacaoDesp) {
-        this.formacaoDesp = formacaoDesp;
+       /**
+        * 
+        * @return 
+        */
+    public Collection<Education> listaSportForm(){
+        Collection <Education> col = new ArrayList<>();
+        for(Education edu : catEducaion.values()){
+            if(edu instanceof EductionUniversitary){
+                col.add(edu);
+            }
+        }
+        return  col;
     }
 
 }

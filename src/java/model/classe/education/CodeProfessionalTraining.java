@@ -9,6 +9,15 @@ package model.classe.education;
  *
  * @author antonio
  */
-public class CodeProfessionalTraining {
+public class CodeProfessionalTraining extends Education{
+
+    public CodeProfessionalTraining(String d, String title, String principalSubjects, String nameOrganisation) {
+        super(d, title, principalSubjects, nameOrganisation);
+    }
+
+    @Override
+    public int compare(Education o1, Education o2) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
     
 }

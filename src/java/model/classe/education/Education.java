@@ -3,60 +3,66 @@
  */
 package model.classe.education;
 
+import java.util.Comparator;
+import java.util.Objects;
+import model.classe.date.Date;
+import model.classe.date.DateFactory;
+
 /**
  * @author Antonio Rodrigues
  * @version 2.0
  * @date 2015/02/06
  */
-public class Education implements Comparable<Education> {
+public abstract class Education implements Comparable<Education>, Comparator<Education> {
 
-    private String date;
+    private Date dateStart;
+    private Date dateEnd;
     private String title;
     private String principalSubjects;
     private String nameOrganisation;
 
     /**
-     * construtor de classe que inicia oa atributos a null
-     */
-    public Education() {
-        this.date = "";
-        this.title = "";
-        this.nameOrganisation = "";
-        this.principalSubjects = "";
-    }
-
-    /**
      * construtor de classe que cria um novo objecto do tipo Education e
      * incializa os atributos com os valores provinientes dos parametros
      *
-     * @param date date da Education
+     * @param d dateStart da Education
      * @param title title da Eudcation
      * @param principalSubjects da Education
      * @param nameOrganisation local onde realizado a Education
      */
-    public Education(String date, String title, String principalSubjects, String nameOrganisation) {
-        this.date = date;
+    public Education(String d, String title, String principalSubjects, String nameOrganisation) {
+        String[] a = d.split("-", 2);
+        this.dateStart = DateFactory.factoryDates(a[0]);
+        this.dateEnd = DateFactory.factoryDates(a[0]);
         this.title = title;
         this.principalSubjects = principalSubjects;
         this.nameOrganisation = nameOrganisation;
     }
 
-    /**
-     * Getter da date
-     *
-     * @return date da education
-     */
-    public String getDate() {
-        return date;
+    public Date getDateEnd() {
+        return dateEnd;
+    }
+
+    public void setDateEnd(Date dateEnd) {
+        this.dateEnd = dateEnd;
     }
 
     /**
-     * Setter da date
+     * Getter da dateStart
      *
-     * @param date date da education
+     * @return dateStart da education
      */
-    public void setDate(String date) {
-        this.date = date;
+    public Date getDateStart() {
+        return dateStart;
+    }
+
+    /**
+     * Setter da dateStart
+     *
+     * @param dateStart dateStart da education
+     */
+    public void setDateStart(Date dateStart) {
+        this.dateStart = dateStart;
     }
 
     /**
@@ -113,34 +119,57 @@ public class Education implements Comparable<Education> {
         this.title = title;
     }
 
-    /**
-     *
-     * @return
-     */
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + Objects.hashCode(this.dateStart);
+        hash = 89 * hash + Objects.hashCode(this.dateEnd);
+        hash = 89 * hash + Objects.hashCode(this.title);
+        hash = 89 * hash + Objects.hashCode(this.principalSubjects);
+        hash = 89 * hash + Objects.hashCode(this.nameOrganisation);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Education other = (Education) obj;
+        if (!Objects.equals(this.dateStart, other.dateStart)) {
+            return false;
+        }
+        if (!Objects.equals(this.dateEnd, other.dateEnd)) {
+            return false;
+        }
+        if (!Objects.equals(this.title, other.title)) {
+            return false;
+        }
+        if (!Objects.equals(this.principalSubjects, other.principalSubjects)) {
+            return false;
+        }
+        if (!Objects.equals(this.nameOrganisation, other.nameOrganisation)) {
+            return false;
+        }
+        return true;
+    }
+
     @Override
     public String toString() {
-        return "Date: " + date + ", Title: " + title + ", "
-                + "PrincipalSubjects: " + principalSubjects + ", "
-                + "NameOrganisation: " + nameOrganisation;
+        return "Education{" + "dateStart=" + dateStart + ", "
+                + "dateEnd=" + dateEnd + ", title=" + title + ", "
+                + "principalSubjects=" + principalSubjects + ", "
+                + "nameOrganisation=" + nameOrganisation + '}';
     }
-   
+
     @Override
     public int compareTo(Education education) {
+        Integer aux = this.dateStart.getYear();
+        Integer edu = education.getDateStart().getYear();
+        return aux.compareTo(edu);
 
-        if (this.getDate().length() > 4 && education.getDate().length() > 4) {
-            return Integer.compare(Integer.parseInt(this.getDate().substring(5))
-                    , Integer.parseInt(education.getDate().substring(5)));
-       
-        } else if (this.getDate().length() > 4) {
-            return Integer.compare(Integer.parseInt(this.getDate().substring(5))
-                    , Integer.parseInt(education.getDate()));
-
-        } else if ((education.getDate().length()) > 4) {
-            return Integer.compare(Integer.parseInt(this.getDate()), 
-                    Integer.parseInt(education.getDate().substring(5)));
-        }
-
-        return Integer.compare(Integer.parseInt(this.getDate()), 
-                Integer.parseInt(education.getDate()));
     }
 }
