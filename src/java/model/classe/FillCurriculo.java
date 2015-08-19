@@ -96,7 +96,7 @@ public class FillCurriculo {
                 "Arbitragem de jogos de paintball, bem como, todos os procedimentos necessários para pôr em prática este tipo de actividade. Técnica de manobras de cordas simples para a execução das actividades no parque como rappel, escalada, slide, pontes de cordas e simulação de salto com pára-quedas.",
                 "Parque Aventura Sniper");
 
-        edOverall.addEducation("2013 ", 
+        edOverall.addEducation("2013", 
                 "Licenciatura em Engenharia Informática (Frequência)", 
                 "Introdução à Programação, Laboratórios de programação, Desenvolvimento Centrado em Objectos, "
                         + "Algoritmos e Estruturas de Dados, Sistemas de Informação e Bases de Dados, "
