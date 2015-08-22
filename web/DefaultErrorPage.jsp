@@ -25,7 +25,7 @@
     </head>
     <body>
            <%@include file="header.jsp" %>
-           
+           <p>dam..... something went Wrong!!!! Sorry about this..</p>
            <%@include file="footer.jsp" %> 
 
     </body>
