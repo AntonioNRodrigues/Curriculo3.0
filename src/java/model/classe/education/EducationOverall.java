@@ -4,6 +4,8 @@
  */
 package model.classe.education;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -16,10 +18,10 @@ import java.util.Map;
  */
 public class EducationOverall {
 
-    private Map<Integer, Education> catEducaion;
+    private Map<Integer, Education> catEducation;
 
     public EducationOverall() {
-        this.catEducaion = new HashMap<>();
+        this.catEducation = new HashMap<>();
     }
     /* método que recebe 4 argumentos e passa-os para a classe Education. 
      * Instancia esse classe criando uma objecto desse tipo e adiciona-o à 
@@ -28,7 +30,7 @@ public class EducationOverall {
 
     public void addEducation(String d, String t, String pS, String nO) {
         Education edu = factoryEducation(d, t, pS, nO);
-        catEducaion.put(edu.hashCode(), edu);
+        catEducation.put(edu.hashCode(), edu);
     }
 
     /**
@@ -52,47 +54,88 @@ public class EducationOverall {
 
     /**
      *
+     * @param typeOfSort
+     * @param typeOfOrder
      * @return
      */
-    public Collection<Education> listaEducUniversitary() {
+    public Collection<Education> listaEducUniversity(String typeOfSort, String typeOfOrder) {
         List<Education> lista = new ArrayList<>();
-        for (Education edu : catEducaion.values()) {
+        for (Education edu : catEducation.values()) {
             if (edu instanceof EductionUniversitary) {
                 lista.add(edu);
             }
         }
-       Collections.sort(lista, Collections.reverseOrder());
+        if (typeOfOrder.equals("DESC")) {
+            Collections.sort(lista);
+        } else {
+
+            Collections.sort(lista, Collections.reverseOrder());
+        }
+
         return lista;
     }
 
     /**
      *
+     * @param typeOfSort
+     * @param typeOfOrder
      * @return
      */
-    public Collection<Education> listaFormCode() {
+    public Collection<Education> listaFormCode(String typeOfSort, String typeOfOrder) {
         List<Education> lista = new ArrayList<>();
-        for (Education edu : catEducaion.values()) {
+        for (Education edu : catEducation.values()) {
             if (edu instanceof CodeProfessionalTraining) {
                 lista.add(edu);
             }
         }
-        Collections.sort(lista, Collections.reverseOrder());
+        if (typeOfOrder.equals("DESC")) {
+            Collections.sort(lista);
+        } else {
+
+            Collections.sort(lista, Collections.reverseOrder());
+        }
+
         return lista;
     }
 
     /**
      *
+     * @param typeOfSort
+     * @param typeOfOrder
      * @return
      */
-    public Collection<Education> listaSportForm() {
+    public Collection<Education> listaFormSport(String typeOfSort, String typeOfOrder) {
         List<Education> lista = new ArrayList<>();
-        for (Education edu : catEducaion.values()) {
+        for (Education edu : catEducation.values()) {
             if (edu instanceof SportProfessionalTraining) {
                 lista.add(edu);
             }
         }
-        Collections.sort(lista, Collections.reverseOrder());
+        if (typeOfOrder.equals("DESC")) {
+            Collections.sort(lista);
+        } else {
+
+            Collections.sort(lista, Collections.reverseOrder());
+        }
+
         return lista;
+    }
+    /**
+     * 
+     * @param lista
+     * @param typeOfSort
+     * @param typeOfOrder
+     * @return
+     * @throws NoSuchMethodException
+     * @throws IllegalAccessException
+     * @throws IllegalArgumentException
+     * @throws InvocationTargetException 
+     */
+    public Collection<Education> getOrderedList(String lista, String typeOfSort, String typeOfOrder) throws NoSuchMethodException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        Method m = this.getClass().getMethod("lista" + lista, String.class, String.class);
+        List<Education> l = (List<Education>) m.invoke(this, typeOfSort, typeOfOrder);
+
+        return l;
     }
 
 }
