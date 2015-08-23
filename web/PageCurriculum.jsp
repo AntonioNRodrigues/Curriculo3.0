@@ -12,10 +12,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="author" content="António Rodrigues" />
         <meta name="description" content="Personal Site" />
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/antonionrodrigues2014.css" type="text/css" media="screen"/>
         <link rel="shortcut icon" type="image/x-icon" href="Imagens/simbol.ico">
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 
         <title>${fullName}</title>
@@ -27,18 +28,54 @@
 
         <div class="container-fluid">
             <div id="content" class="row"> 
-                <div id="barraNavegacao">
-                    <ul id="tabelas" class ="col-md-2">
+                <div id="barraNavegacao" class="col-md-2">
+                    <ul class="nav nav-pills nav-stacked">
                         <li id="tituloBarraNav1"><b>Educação</b></li>
-                        <li id="formUniv"><a href="#" title="view the content of University">Universidade</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Universidade<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ControladorPersonalPage?list=EducUniversity&sort=date&order=ASC">Sorted by ASC date </a></li>
+                                <li><a href="ControladorPersonalPage?list=EducUniversity&sort=date&order=DESC">Sorted by DESC date</a></li>
+                            </ul>
+                        </li>
                         <li id="dif">Cursos/Formação</li>
-                        <li id="formCode"><a href="#" title="view Coding">Programação</a></li>
-                        <li id="formSport"><a href="#" title="view Sports">Desporto</a></li>
-
-
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Programação<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ControladorPersonalPage?list=FormCode&sort=date&order=ASC">Sorted by ASC date </a></li>
+                                <li><a href="ControladorPersonalPage?list=FormCode&sort=date&order=DESC">Sorted by DESC date</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Desporto<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ControladorPersonalPage?list=FormSport&sort=date&order=ASC">Sorted by ASC date </a></li>
+                                <li><a href="ControladorPersonalPage?list=FormSport&sort=date&order=DESC">Sorted by DESC date</a></li>
+                            </ul>
+                        </li>
                         <li id="tituloBarraNav2"><b>Experiência</b></li>
-                        <li id="expDocenteLink"><a href="#" title="view teaching experience" >Docência</a></li>
-                        <li id="expSportsLink"><a href="#" title="view sports experience"  >Desporto</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Docencia<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateStart&order=ASC">Sorted by ASC date Started</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateStart&order=DESC">Sorted by DESC date Started</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateLeft&order=ASC">Sorted by ASC date Left</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateLeft&order=DESC">Sorted by DESC date Left</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateInterval&order=ASC">Sorted by ASC Interval date</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateInterval&order=DESC">Sorted by DESC INterval date</a></li>
+                            </ul>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Desporto<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateStart&order=ASC">Sorted by ASC date Started</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateStart&order=DESC">Sorted by DESC date Started</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateLeft&order=ASC">Sorted by ASC date Left</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateLeft&order=DESC">Sorted by DESC date Left</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateInterval&order=ASC">Sorted by ASC Interval date</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateInterval&order=DESC">Sorted by DESC INterval date</a></li>
+                            </ul>
+                        </li>
 
                         <li id="tituloBarraNav3"><b>Portefolio/Badges</b></li>
                         <li><a href="http://www.codecademy.com/pt/users/antoniorodrigues" 
@@ -50,12 +87,13 @@
                         <li><a href="http://teamtreehouse.com/antoniorodrigues" target="_blank" 
                                title="Treehouse profile">TreeHouse</a>
                         </li>
+
                     </ul>
+                    
                 </div>     
 
 
                 <div id="content2" class = "col-md-10">
-
                     <ul id="FormCursosProg">
                         <c:forEach var="eduFormProg" items="${eduFormProg}"> 
                             <li><b>Datas: </b>${eduFormProg.dateStart} <br> 
@@ -114,10 +152,8 @@
         </div>
         <%@include file="footer.jsp" %>
 
-
-
-
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="JS/antonionrodrigues.js" type="text/javascript"></script>
+        <script src="JS/menuSort.js" type="text/javascript"></script>
     </body>
 </html>
