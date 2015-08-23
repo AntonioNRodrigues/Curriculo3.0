@@ -15,7 +15,6 @@ public class DateFactory {
         for (String a1 : a) {
             String trim = a1.trim();
         }
-        System.out.println(a[0]);
         if (a.length == 1) {
             data = new DateAno(Integer.parseInt(a[0]));
 
@@ -30,7 +29,7 @@ public class DateFactory {
     }
 
     private static String[] refactorSring(String str) {
-        String str2 = null;
+        String str2;
         if (str.length() > 8) {
             str2 = str.substring(0, 7);
         } else {
