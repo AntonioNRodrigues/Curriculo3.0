@@ -21,11 +21,11 @@ public class TetesNewExperience {
                 "Escola N.º2 da Bobadela (Lisboa).");
     
         System.out.println("Lista Experiences teatcher");
-        System.out.println(wExperience.listaExpDocencia());
+        System.out.println(wExperience.listaExpTeaching("",""));
         
         System.out.println("Lista Experiences Sports");
 
-        System.out.println(wExperience.listaExpSports());
+        System.out.println(wExperience.listaExpSport("",""));
         
       
     }
