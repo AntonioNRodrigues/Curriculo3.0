@@ -194,9 +194,7 @@ public abstract class Experience implements Comparable<Experience> {
         private int calcTempo(Experience exp) {
             int tempo = 0;
             tempo += (exp.getDateLeft().getYear() - exp.getDateStart().getYear()) * 365;
-            System.out.println(tempo);
             tempo += calcMonthUntilEndOftheYear(exp.dateLeft.getMonth());
-            System.out.println(tempo);
             tempo += calcMonthUntil(exp.dateStart.getMonth());
             return tempo;
         }
@@ -204,7 +202,7 @@ public abstract class Experience implements Comparable<Experience> {
         private int calcMonthUntil(int month) {
             int calc = 0;
             for (int i = month; i > 0; i--) {
-                calc += caldias(i);
+                calc += calcdias(i);
             }
             return calc;
         }
@@ -212,12 +210,12 @@ public abstract class Experience implements Comparable<Experience> {
         private int calcMonthUntilEndOftheYear(int month) {
             int calc = 0;
             for (int i = 0; i < month; i++) {
-                calc += caldias(i);
+                calc += calcdias(i);
             }
             return calc;
         }
 
-        private int caldias(int m) {
+        private int calcdias(int m) {
             int dias;
             if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) {
                 dias = 31;
