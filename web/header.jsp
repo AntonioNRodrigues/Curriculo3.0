@@ -29,7 +29,7 @@
                     <a href ="AboutMe.jsp">About</a> 
                     <a href ="Projects.jsp">Projects</a> 
                     </dt>
-
+                    
                 </dl>
             </header> 
         </div>
