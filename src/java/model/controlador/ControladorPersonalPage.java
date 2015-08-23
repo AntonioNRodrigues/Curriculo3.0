@@ -7,6 +7,9 @@ package model.controlador;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.lang.reflect.InvocationTargetException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,6 +27,10 @@ import model.classe.FillCurriculo;
 
 public class ControladorPersonalPage extends HttpServlet {
 
+    private static final String CONSTANT1 = "Edu";
+    private static final String CONSTANT2 = "Exp";
+    private static final String CONSTANT3 = "Form";
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -32,12 +39,21 @@ public class ControladorPersonalPage extends HttpServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
+     * @throws java.lang.NoSuchMethodException
+     * @throws java.lang.IllegalAccessException
+     * @throws java.lang.reflect.InvocationTargetException
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, NoSuchMethodException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         response.setContentType("text/html;charset=UTF-8");
 
         PrintWriter out = response.getWriter();
+        String[] array = null;
+
+        if (request.getQueryString() != null) {
+            array = request.getQueryString().split("\\s*[=,&]\\s*");
+        }
+
         try {
 
             FillCurriculo fc = new FillCurriculo();
@@ -46,6 +62,9 @@ public class ControladorPersonalPage extends HttpServlet {
             //response to PageCurriculum.jsp
             RequestDispatcher rd
                     = request.getRequestDispatcher("PageCurriculum.jsp");
+            
+             RequestDispatcher rdError
+                    = request.getRequestDispatcher("DefaultErrorPage.jsp");
 
             //personal information
             request.setAttribute("fullName", c.getPersInf().getFullName());
@@ -59,14 +78,27 @@ public class ControladorPersonalPage extends HttpServlet {
             request.setAttribute("endF", c.getPersInf().getEndFacebook());
             request.setAttribute("endL", c.getPersInf().getEndLinkedin());
 
-            //listas Experience
-            request.setAttribute("expEdFisica", c.getWorkExp().listaExpDocencia());
-            request.setAttribute("expMonitor", c.getWorkExp().listaExpSports());
+            if (array == null) {
+                //listas Experience
+                request.setAttribute("expEdFisica", c.getWorkExp().listaExpTeaching("",""));
+                request.setAttribute("expMonitor", c.getWorkExp().listaExpSport("",""));
 
-            //listas Education 
-            request.setAttribute("eduFormDesp", c.getEduc().listaSportForm());
-            request.setAttribute("eduFormProg", c.getEduc().listaFormCode());
-            request.setAttribute("eduSup", c.getEduc().listaEducUniversitary());
+                //listas Education 
+                request.setAttribute("eduFormDesp", c.getEduc().listaFormSport("",""));
+                request.setAttribute("eduFormProg", c.getEduc().listaFormCode("",""));
+                request.setAttribute("eduSup", c.getEduc().listaEducUniversity("",""));
+            } else {
+                if (array[1].startsWith(CONSTANT1) || array[1].startsWith(CONSTANT3)) {
+
+                    request.setAttribute("eduFormDesp", c.getEduc().getOrderedList(array[1], array[3], array[5]));
+                }else if(array[1].startsWith(CONSTANT2)){
+                    
+                    request.setAttribute("expMonitor", c.getWorkExp().getOrderedList(array[1], array[3], array[5]));
+                }else{
+                    rdError.forward(request, response);
+                }
+
+            }
 
             rd.forward(request, response);
 
@@ -87,7 +119,11 @@ public class ControladorPersonalPage extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (NoSuchMethodException | IllegalAccessException | IllegalArgumentException | InvocationTargetException ex) {
+            Logger.getLogger(ControladorPersonalPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -101,7 +137,11 @@ public class ControladorPersonalPage extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (NoSuchMethodException | IllegalAccessException | IllegalArgumentException | InvocationTargetException ex) {
+            Logger.getLogger(ControladorPersonalPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
