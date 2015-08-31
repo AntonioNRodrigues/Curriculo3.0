@@ -51,8 +51,8 @@ public class TestesCompare {
         for(Education e: exp){
         //    System.out.println(e.getDateStart());
         }
-
         
+ 
     }
 
 }
