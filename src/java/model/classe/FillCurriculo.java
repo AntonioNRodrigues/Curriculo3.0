@@ -165,7 +165,7 @@ public class FillCurriculo {
                 "Docente",
                 "Leccionar a disciplina de Educação Física a 4 turmas do 3ºCiclo ao Secundário (11h por semana).",
                 "Colégio D. Filipa (Amadora)");
-        wExperience.addExperience("07/2008-10/2008 (2 semanas)",
+        wExperience.addExperience("07/2008-07/2008 (2 semanas)",
                 "Coordenador de uma equipa de animação de praia",
                 "Organização, implementação e arbitragem de torneios de futebol de praia, bitoque rugby e futebol 2x2.",
                 "C.I Eventos, Leiriasport (praia do Pedrogão)");
