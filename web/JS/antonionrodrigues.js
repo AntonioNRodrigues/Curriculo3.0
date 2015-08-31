@@ -123,39 +123,9 @@ function decrescer(idEleDecresce, id) {
  *                                                  *           
  ****************************************************/
 
-
-$('#formUniv a').click(function (evento) {
-
-    evento.preventDefault();
-    $('#FormSup').show();
-    $('#FormCursosProg, #ExpDocente, #FormCursosDesp, #ExpOutros, footer').hide();
+$('.dropdown-menu li a').click(function (evento){
+        $('footer').hide();
 });
-$('#formCode a').click(function (evento) {
-
-    evento.preventDefault();
-    $('#FormCursosProg').show();
-    $('#ExpDocente, #FormSup, #FormCursosDesp, #ExpOutros, footer').hide();
-});
-$('#formSport a').click(function (evento) {
-
-    evento.preventDefault();
-    $('#FormCursosDesp').show();
-    $('#FormCursosProg, #FormSup, #ExpDocente, #ExpOutros, footer').hide();
-});
-
-$('#expDocenteLink a').click(function (evento) {
-    evento.preventDefault();
-    $('#ExpDocente').show();
-    $('#FormCursosProg, #FormSup, #FormCursosDesp, #ExpOutros, footer').hide();
-});
-
-$('#expSportsLink a').click(function (evento) {
-
-    evento.preventDefault();
-    $('#ExpOutros').show();
-    $('#FormCursosProg, #FormSup, #FormCursosDesp, #ExpDocente, footer').hide();
-});
-
 
 /*
  * função relacionada com o menu de links para as outras paginas
