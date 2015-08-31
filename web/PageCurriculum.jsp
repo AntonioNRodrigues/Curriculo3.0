@@ -78,13 +78,13 @@
                         </li>
 
                         <li id="tituloBarraNav3"><b>Portefolio/Badges</b></li>
-                        <li><a href="http://www.codecademy.com/pt/users/antoniorodrigues" 
+                        <li class="dropdownfake"><a href="http://www.codecademy.com/pt/users/antoniorodrigues" 
                                title="Codecade profile" target="_blank">Codecademy</a>
                         </li>
-                        <li><a href="http://www.khanacademy.org/profile/AntonioRodrigues/" 
+                        <li class="dropdownfake"><a href="http://www.khanacademy.org/profile/AntonioRodrigues/" 
                                title="KhanAcademy profile" target="_blank">KhanAcademy</a>
                         </li>
-                        <li><a href="http://teamtreehouse.com/antoniorodrigues" target="_blank" 
+                        <li class="dropdownfake"><a href="http://teamtreehouse.com/antoniorodrigues" target="_blank" 
                                title="Treehouse profile">TreeHouse</a>
                         </li>
 
