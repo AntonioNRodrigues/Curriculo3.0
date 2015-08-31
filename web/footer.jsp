@@ -13,7 +13,7 @@
                 <a href="AboutMe.jsp" target="_blank"> 
                     <span style="font-size: 20px">&copy;
                     </span>
-                    António Rodrigues 2013-2015
+                    António Rodrigues 2013-
                 </a>
             </p>
         </footer>

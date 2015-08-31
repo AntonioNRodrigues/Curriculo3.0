@@ -18,8 +18,8 @@
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="CSS/antonionrodrigues.css" type="text/css" media="screen"/>
         <link rel="shortcut icon" type="image/x-icon" href="Imagens/simbol.ico">
-        <script src="JS/antonionrodrigues.js" type="text/javascript"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        
         <title><%= pf.getFirstName()%><%=pf.getLastName()%></title>
     </head>
 
@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <p id="texto">
-                        Chamo-me António Rodrigues, tenho 33 anos e vivo em Lisboa. 
+                        Chamo-me António Rodrigues, tenho 34 anos e vivo em Lisboa. 
                         Licenciei-me em Ciências do Desporto 
                         e Educação Física pela F.C.D.E.F da Universidade de Coimbra. 
                         Tenho trabalhado, essencialmente, como professor de Educação Física, de 
@@ -78,67 +78,14 @@
         <div  id="CvDivAboutMe" onmouseover="crescer('CvDivAboutMe', 'CvAboutMe');" 
               onmouseout="decrescer('CvDivAboutMe', 'CvAboutMe');">
             <a id="CvAboutMe" href="ControladorPersonalPage"><em>Cv</em></a></div>
-            <%--
-            <div id="bloco2">
-                
-                <ul> 
-                    <li><a id="primeiro" href="#" onmouseover="popIn('primeiro', 'milNove');" onmouseout="normal('primeiro', 'milNove');"><p>1999</p></a> </li>
-                    <li><a id="segundo" href="#" onmouseover="popIn('segundo', 'doisCinco');" onmouseout="normal('segundo', 'doisCinco');"><p>2005</p></a> </li>
-                    <li><a id="terceiro" href="#" onmouseover="popIn('terceiro', 'doisSeis');" onmouseout="normal('terceiro', 'doisSeis');"><p>2006</p></a> </li>        
-                    <li><a id="quarto" href="#" onmouseover="popIn('quarto', 'doisSete');" onmouseout="normal('quarto', 'doisSete');"><p>2007</p></a> </li>
-                    <li><a id="quinto" href="#" onmouseover="popIn('quinto', 'doisOito');" onmouseout="normal('quinto', 'doisOito');"><p>2008</p></a> </li>
-                    <li><a id="sexto" href="#" onmouseover="popIn('sexto', 'doisNove');" onmouseout="normal('sexto', 'doisNove');"><p>2009</p></a> </li>
-                    <li><a id="setimo" href="#" onmouseover="popIn('setimo', 'doisDez');" onmouseout="normal('setimo', 'doisDez');"><p>2010</p></a> </li>
-                    <li><a id="oitavo" href="#" onmouseover="popIn('oitavo', 'doisOnze');" onmouseout="normal('oitavo', 'doisOnze');"><p>2011</p></a> </li>
-                    <li><a id="nono" href="#" onmouseover="popIn('nono', 'doisDoze');" onmouseout="normal('nono', 'doisDoze');"><p>2012</p></a> </li>
-                    
-                </ul>
-               
-                </div>
-      
-                <div id="milNove">
-                    <p>Terminei o Ensino Secundário.</p><br>
-                    <p>Ingressei na faculdade para ir estudar Ciências do Desporto e Educação Física na F.C.D.E.F - Universidade de Coimbra</p>
-                    
-                </div>
-                
-                <div id="doisCinco">
-                    <p>Ano de finalização da minha licenciatura</p><br>
-                    <p>Primeiro trabalho </p>
-                </div>
-      
-                <div id="doisSeis">
-                    <p>.....3</p>
-                </div>
-      
-                <div id="doisSete">
-                    <p>.....4</p>
-                </div>
-      
-                <div id="doisOito">
-                    <p>.....5</p>
-                </div>
-            
-                <div id="doisNove">
-                    <p>.....6</p>
-                </div>
-                
-                <div id="doisDez">
-                    <p>.....7</p>
-                </div>
-      
-                <div id="doisOnze">
-                    <p>.....8</p>
-                </div>
-      
-                <div id="doisDoze">
-                    <p>.....9</p>
-                </div>
-            --%>
+
 
         <footer>
-            <p><a href="AboutMe.jsp"> <span style="font-size: 20px">&copy;</span> António Rodrigues 2013-2015</a></p>
-        </footer>     
+            <p><a href="AboutMe.jsp"> <span style="font-size: 20px">&copy;</span> António Rodrigues 2013-</a></p>
+        </footer>  
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="JS/antonionrodrigues.js" type="text/javascript"></script>
     </body>
 
 

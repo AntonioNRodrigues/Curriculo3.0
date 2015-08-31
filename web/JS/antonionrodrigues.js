@@ -124,33 +124,33 @@ function decrescer(idEleDecresce, id) {
  ****************************************************/
 
 
-$('#formUniv a').click(function(evento){
-    
+$('#formUniv a').click(function (evento) {
+
     evento.preventDefault();
     $('#FormSup').show();
     $('#FormCursosProg, #ExpDocente, #FormCursosDesp, #ExpOutros, footer').hide();
 });
-$('#formCode a').click(function(evento){
-   
+$('#formCode a').click(function (evento) {
+
     evento.preventDefault();
     $('#FormCursosProg').show();
     $('#ExpDocente, #FormSup, #FormCursosDesp, #ExpOutros, footer').hide();
 });
-$('#formSport a').click(function(evento){
-   
+$('#formSport a').click(function (evento) {
+
     evento.preventDefault();
     $('#FormCursosDesp').show();
     $('#FormCursosProg, #FormSup, #ExpDocente, #ExpOutros, footer').hide();
 });
 
-$('#expDocenteLink a').click(function(evento){
+$('#expDocenteLink a').click(function (evento) {
     evento.preventDefault();
     $('#ExpDocente').show();
     $('#FormCursosProg, #FormSup, #FormCursosDesp, #ExpOutros, footer').hide();
 });
 
-$('#expSportsLink a').click(function(evento){
-   
+$('#expSportsLink a').click(function (evento) {
+
     evento.preventDefault();
     $('#ExpOutros').show();
     $('#FormCursosProg, #FormSup, #FormCursosDesp, #ExpDocente, footer').hide();
@@ -290,10 +290,10 @@ function showForm() {
 function clearSubmitMenu(elemento) {
     var accessKeyArticle = elemento.parent().attr("accesskey");
     // recoloca cada div com a accessKeyArticle na div com o id #getComments
-    elemento.parent().children('#' + accessKeyArticle).each(function() {
+    elemento.parent().children('#' + accessKeyArticle).each(function () {
         $("#getComments").append($(this));
     });
-    elemento.parent().children("#insertComments").hide("slow", function() {
+    elemento.parent().children("#insertComments").hide("slow", function () {
     });
 }
 
@@ -306,8 +306,8 @@ function clearSubmitMenu(elemento) {
 function showCommentsAndInsertComment(article) {
 
     var accessKeyArticle = article.attr("accesskey");
-    article.children("#insertComments").show("slow", function() {
-        $("#getComments").children().each(function() {
+    article.children("#insertComments").show("slow", function () {
+        $("#getComments").children().each(function () {
             if ($(this).attr("id") === accessKeyArticle) {
                 // retira da div #getComments as div com o mesmo id do acceskey do article
                 article.append($(this).show("slow"));
@@ -329,7 +329,7 @@ function insertComment(element, form) {
 
     var fullDate = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
 
-    element.submit(function(event) {
+    element.submit(function (event) {
         event.preventDefault();
     });
 
@@ -345,7 +345,7 @@ function insertComment(element, form) {
             type: 'post',
             data: response, // Data to be sent to the server
             dataType: 'text', // the type of data that is send back from the server
-            success: function(dataSendBackFromTheServer) {
+            success: function (dataSendBackFromTheServer) {
                 //console.log(dataSendBackFromTheServer);
                 if (dataSendBackFromTheServer === "1") {
 
@@ -381,15 +381,15 @@ function insertComment(element, form) {
  * o id igual ao accesskey do artigo coloca-o como comentario desse artigo.
  * Por fim realiza um pequeno scrool ate ao a div insertComments.
  */
-$('article #counterArticleA').click(function(event) {
+$('article #counterArticleA').click(function (event) {
 
     event.preventDefault();
     var counterArticle = $(this).children();
     var accessKeyArticle = counterArticle.parent().parent().attr("accesskey");
     var $divInsertComments = counterArticle.parent().parent().children("#insertComments");
 
-    $divInsertComments.show("slow", function() {
-        $("#getComments").children().each(function() {
+    $divInsertComments.show("slow", function () {
+        $("#getComments").children().each(function () {
             if ($(this).attr("id") === accessKeyArticle) {
                 counterArticle.parent().parent().append($(this).show("slow"));
             }
@@ -400,4 +400,12 @@ $('article #counterArticleA').click(function(event) {
         scrollTop: $divInsertComments.offset().top
     }, 2000);
 
+});
+
+/**
+ * function that as each page loads inserts the current year in the footer
+ * @param {type} param
+ */
+$(document).ready(function () {
+    $('footer p a').append(new Date().getFullYear());
 });

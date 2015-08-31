@@ -14,19 +14,21 @@
 
 <!DOCTYPE html>
 <html>
-     <head>
+    <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="CSS/normalize.css" type="text/css" media="screen"/>
-       <%-- <link rel="stylesheet" href="CSS/antonionrodrigues.css" type="text/css" media="screen"/> --%>
         <link rel="stylesheet" href="CSS/antonionrodrigues2014.css" type="text/css" media="screen"/>
         <link rel="shortcut icon" type="image/x-icon" href="Imagens/simbol.ico">
-        <script src="JS/antonionrodrigues.js" type="text/javascript"></script>
         <title>António Rodrigues</title>
     </head>
     <body>
-           <%@include file="header.jsp" %>
-           <p>dam..... something went Wrong!!!! Sorry about this..</p>
-           <%@include file="footer.jsp" %> 
+        <%@include file="header.jsp" %>
+        <p>dam..... something went Wrong!!!! Sorry about this..</p>
+        <%@include file="footer.jsp" %>
 
+
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="JS/antonionrodrigues.js" type="text/javascript"></script>
     </body>
 </html>

@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="CSS/normalize.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="CSS/antonionrodrigues.css" type="text/css" media="screen"/>
         <link rel="shortcut icon" type="image/x-icon" href="Imagens/simbol.ico">
-        <script src="JS/antonionrodrigues.js" type="text/javascript"></script>
         <meta name="google-site-verification" content="K-ymv6-X1npnBub3M05ZAw9pIAMrToUYhnnamS82DmQ" />
         <title>António Rodrigues</title>
     </head>
@@ -30,8 +29,11 @@
         </div>
 
         <footer id="footerFrontPage">
-            <p><a href="AboutMe.jsp" target="_blank"> <span style="font-size: 20px">&copy;</span> António Rodrigues 2013-2015</a></p>
+            <p><a href="AboutMe.jsp" target="_blank"> <span style="font-size: 20px">&copy;</span> António Rodrigues 2013-</a></p>
         </footer>
+        
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="JS/antonionrodrigues.js" type="text/javascript"></script>
     </body>
 
 </html>
