@@ -226,6 +226,9 @@ header #links a{
     position: fixed;
 }
 
+.dropdown-toggle, .dropdownfake{
+   max-width: 150px;
+}
 
 /****************************************************
 *                                                  *                
