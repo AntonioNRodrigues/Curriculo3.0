@@ -42,38 +42,38 @@
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Programação<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="ControladorPersonalPage?list=FormCode&sort=date&order=ASC">Data: mais recente</a></li>
-                                <li><a href="ControladorPersonalPage?list=FormCode&sort=date&order=DESC">Data: mais antigo</a></li>
+                                <li><a href="ControladorPersonalPage?list=FormCode&sort=date&order=ASC">Data: + recente</a></li>
+                                <li><a href="ControladorPersonalPage?list=FormCode&sort=date&order=DESC">Data: + antigo</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Desporto<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="ControladorPersonalPage?list=FormSport&sort=date&order=ASC">Data: mais recente</a></li>
-                                <li><a href="ControladorPersonalPage?list=FormSport&sort=date&order=DESC">Data: mais antigo</a></li>
+                                <li><a href="ControladorPersonalPage?list=FormSport&sort=date&order=ASC">Data: + recente</a></li>
+                                <li><a href="ControladorPersonalPage?list=FormSport&sort=date&order=DESC">Data: + antigo</a></li>
                             </ul>
                         </li>
                         <li id="tituloBarraNav2"><b>Experiência</b></li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Docencia<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateStart&order=ASC">Data entrada: mais recente</a></li>
-                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateStart&order=DESC">Data entrada: mais antiga</a></li>
-                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateLeft&order=ASC">Data saída: mais recente</a></li>
-                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateLeft&order=DESC">Data saída: mais antiga</a></li>
-                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateInterval&order=ASC">Maior tempo de permanência</a></li>
-                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateInterval&order=DESC">Menor tempo de permanência</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateStart&order=ASC">D. entrada: + recente</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateStart&order=DESC">D. entrada: + antiga</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateLeft&order=ASC">D. saída: + recente</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateLeft&order=DESC">D. saída: + antiga</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateInterval&order=ASC"> + tempo</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpTeaching&sort=dateInterval&order=DESC"> - tempo</a></li>
                             </ul>
 
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Desporto<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateStart&order=ASC">Data entrada: mais recente</a></li>
-                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateStart&order=DESC">Data entrada: mais antiga</a></li>
-                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateLeft&order=ASC">Data saída: mais recente</a></li>
-                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateLeft&order=DESC">Data saída: mais antigo</a></li>
-                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateInterval&order=ASC">Maior tempo de permanência</a></li>
-                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateInterval&order=DESC">Menor tempo de permanência</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateStart&order=ASC">D. entrada: + recente</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateStart&order=DESC">D. entrada: + antiga</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateLeft&order=ASC">D. saída: + recente</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateLeft&order=DESC">D. saída: + antigo</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateInterval&order=ASC">+ tempo</a></li>
+                                <li><a href="ControladorPersonalPage?list=ExpSport&sort=dateInterval&order=DESC">- tempo</a></li>
                             </ul>
                         </li>
 
