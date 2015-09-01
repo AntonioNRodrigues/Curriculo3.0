@@ -67,8 +67,8 @@
                                 %> 
 
         <sql:setDataSource var="dataBase" driver="${MyCon.driver}"
-                           url="${MyCon.linkServer}" user="${MyCon.userServer}" 
-                           password="${MyCon.passServer}" />
+                           url="${MyCon.linkNetbeans}" user="${MyCon.userNetbeans}" 
+                           password="${MyCon.passNetbeans}" />
 
         <sql:query var="result" dataSource="${dataBase}" >
             select Name, Comment, ArticleNumber, Date from commentsArticles Order by Date DESC; 
@@ -139,6 +139,8 @@
                 <article class="col-md-4" accesskey="5"><%@include file="Articles/LabP/Analista/Analista.jsp" %></article>
 
                 <article id="especialNumber4" class="col-md-4" accesskey="4"><%@include file="Articles/Exemplos/SimpleInsertUserDB.jsp" %></article>
+
+                
 
             </div>
 
