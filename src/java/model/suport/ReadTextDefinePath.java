@@ -26,7 +26,7 @@ public class ReadTextDefinePath {
      * @requires paths.lenght>0
      */
     public ReadTextDefinePath(String... paths) {
-        listaPaths = new ArrayList<String>(Arrays.asList(paths));
+        listaPaths = new ArrayList<>(Arrays.asList(paths));
     }
 
     /**
