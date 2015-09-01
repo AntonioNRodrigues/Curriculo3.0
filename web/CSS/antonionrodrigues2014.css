@@ -177,10 +177,14 @@ header #links a{
 *                                                  *                
 *                                                  *           
 ****************************************************/
-
+.dropdown-menu li a{
+    padding: 0px;
+    margin: 0px;
+}
 
 #bodyPageCurriculum{
-    background-color: black; 
+    background-color: white; 
+    
 }
 
 #barraNavegacao li{
