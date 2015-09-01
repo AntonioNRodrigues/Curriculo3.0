@@ -67,8 +67,8 @@
                                 %> 
 
         <sql:setDataSource var="dataBase" driver="${MyCon.driver}"
-                           url="${MyCon.linkServerBeta}" user="${MyCon.userServerBeta}" 
-                           password="${MyCon.passServerBeta}" />
+                           url="${MyCon.linkServer}" user="${MyCon.userServer}" 
+                           password="${MyCon.passServer}" />
 
         <sql:query var="result" dataSource="${dataBase}" >
             select Name, Comment, ArticleNumber, Date from commentsArticles Order by Date DESC; 
