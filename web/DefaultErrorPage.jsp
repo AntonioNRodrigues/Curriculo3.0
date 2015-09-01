@@ -23,7 +23,7 @@
     </head>
     <body>
         <%@include file="header.jsp" %>
-        <p>dam..... something went Wrong!!!! Sorry about this..</p>
+        <p>Aconteceu algum de errado, peço desculpa pelo sucessido.</p>
         <%@include file="footer.jsp" %>
 
 
