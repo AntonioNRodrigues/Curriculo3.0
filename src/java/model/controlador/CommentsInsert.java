@@ -81,7 +81,7 @@ public class CommentsInsert extends HttpServlet {
 
                 Class.forName(MyCon.getDriver());
                 connection = DriverManager.getConnection(MyCon.getLinkServer(),
-                        MyCon.getUserServer(), MyCon.getUserServer());
+                        MyCon.getUserServer(), MyCon.getPassServer());
                 st = connection.createStatement();
 
                 st.executeUpdate("INSERT INTO commentsArticles(Name, Comment, ArticleNumber, Date) "
