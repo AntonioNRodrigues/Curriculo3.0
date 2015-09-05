@@ -67,8 +67,8 @@
                                 %> 
 
         <sql:setDataSource var="dataBase" driver="${MyCon.driver}"
-                           url="${MyCon.linkServer}" user="${MyCon.userServer}" 
-                           password="${MyCon.passServer}" />
+                           url="${MyCon.linkNetbeans}" user="${MyCon.userNetbeans}" 
+                           password="${MyCon.passNetbeans}" />
 
         <sql:query var="result" dataSource="${dataBase}" >
             select Name, Comment, ArticleNumber, Date from commentsArticles Order by Date DESC; 
@@ -83,7 +83,7 @@
                     <a id="counterArticleA" href="#"><div id="counterArticle">
                             <c:out value="${loopCounter1}" /> </div></a>
                     <h1>WebPage</h1>
-                    <img id="imagemSite" src="Imagens/FrontPage.jpg" class="img-responsive" alt="responsive imagem">
+                    <img id="imagemSite" src="Imagens/loading.gif" class="img-responsive" alt="responsive imagem">
 
                     <h3>Java Classes</h3>
                     <p>

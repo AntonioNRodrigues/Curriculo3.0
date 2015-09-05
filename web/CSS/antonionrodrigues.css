@@ -475,6 +475,7 @@ footer a{
 #imagemSite{
     border: 3px solid #CD6600;
     width: 100%;
+     background: url(loading.gif) 50% no-repeat;
 }
 #imagemSite:hover{
     border: 5px solid #CD6600;
