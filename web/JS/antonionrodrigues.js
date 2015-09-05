@@ -123,8 +123,8 @@ function decrescer(idEleDecresce, id) {
  *                                                  *           
  ****************************************************/
 
-$('.dropdown-menu li a').click(function (evento){
-        $('footer').hide();
+$('.dropdown-menu li a').click(function (evento) {
+    $('footer').hide();
 });
 
 /*
@@ -372,6 +372,16 @@ $('article #counterArticleA').click(function (event) {
 
 });
 
+
+var $image = $('#imagemSite').first();
+var $downloadedImage = $('<img id ="imagemSite">');
+
+$downloadedImage.load(function(){
+    $image.attr("src", $(this).attr("src"));
+    $image.css("border","3px solid #CD6600");
+});
+$downloadedImage.attr("src","Imagens/FrontPage.jpg");
+
 /**
  * function that as each page loads inserts the current year in the footer
  * @param {type} param
@@ -379,3 +389,4 @@ $('article #counterArticleA').click(function (event) {
 $(document).ready(function () {
     $('footer p a').append(new Date().getFullYear());
 });
+
