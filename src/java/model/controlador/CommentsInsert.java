@@ -26,7 +26,7 @@ import javax.servlet.http.HttpServletResponse;
  * @version 1.0
  * @Date 2014/09/06
  */
-@WebServlet(name = "CommentsInsert", urlPatterns = {"/CommentsInsert"})
+@WebServlet(name = "CommentsInsert", urlPatterns = {"/CommentsInsert"}, asyncSupported = true)
 public class CommentsInsert extends HttpServlet {
 
     /**
