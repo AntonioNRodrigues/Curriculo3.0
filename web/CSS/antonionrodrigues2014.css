@@ -410,3 +410,91 @@ time ~ p{
     color: #111111;
     padding-top: 7%;
 }
+
+
+
+
+/****************************************************
+*                                                  *                
+*           Page -  FrontPage                      *            
+*                                                  *        
+*                                                  *                
+*                                                  *           
+****************************************************/
+
+
+#footerFrontPage{ 
+    background-color: black;
+    left: 0;
+    right: 0;
+    position:fixed;
+    bottom: 0;
+    border-top-width: thick;
+    border-top: 3px #ff8f00 groove;
+    margin-top: 0%;
+
+}
+#footerFrontPage p{               
+    text-align: end;
+    margin-right: 1%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    
+}
+#footerFrontPage a{
+    color: orange;
+    text-decoration: none;
+    font-size: 14px;
+   
+}
+
+.item h3 a{
+    color:orange;
+    background-color: #000;
+    padding: 0 2% 0 2%;
+    position: relative; 
+    max-width: 20%;
+    height: auto;
+    
+    color: #ff8f00;
+    text-align: center;
+    margin: auto 2%;
+    font-size: 37px;
+    font-weight: normal;
+    text-decoration: none;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+    text-transform: uppercase;
+}
+.item h3 a:hover{
+    background-color: #ff8f00;
+    color:#000;
+    transition: all ease-in-out 2s; 
+}
+
+.carousel-inner .item img{
+    max-width: 100%;
+}
+
+#frontPage{
+    position:fixed;
+    top:0; bottom:0; left:0; right:0;
+    background-color: #000;
+    margin: 0;
+    width: 100%;
+    font-family: 'Oswald', 'Helvetica Neue', Helvetica;
+}
+.carousel-indicators .active{
+    background-color: #ffffff !important;
+    border-color: #FFA500;
+}
+
+.carousel-indicators li{
+    background-color: #FFA500 !important;
+    border-color: #FFA500 !important;
+}
+
+
+.carousel-control{
+    color: #FFA500 !important;
+}
+  

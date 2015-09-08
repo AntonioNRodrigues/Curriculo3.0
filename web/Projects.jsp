@@ -64,7 +64,7 @@
                 }
 
             }
-                                %> 
+                                            %> 
 
         <sql:setDataSource var="dataBase" driver="${MyCon.driver}"
                            url="${MyCon.linkNetbeans}" user="${MyCon.userNetbeans}" 
@@ -140,7 +140,7 @@
 
                 <article id="especialNumber4" class="col-md-4" accesskey="4"><%@include file="Articles/Exemplos/SimpleInsertUserDB.jsp" %></article>
 
-                
+
 
             </div>
 

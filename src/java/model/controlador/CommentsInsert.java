@@ -26,7 +26,7 @@ import javax.servlet.http.HttpServletResponse;
  * @version 1.0
  * @Date 2014/09/06
  */
-@WebServlet(name = "CommentsInsert", urlPatterns = {"/CommentsInsert"})
+@WebServlet(name = "CommentsInsert", urlPatterns = {"/CommentsInsert"}, asyncSupported = true)
 public class CommentsInsert extends HttpServlet {
 
     /**
@@ -80,8 +80,8 @@ public class CommentsInsert extends HttpServlet {
             if (name != null && comment != null && articleNumber > 0) {
 
                 Class.forName(MyCon.getDriver());
-                connection = DriverManager.getConnection(MyCon.getLinkServer(),
-                        MyCon.getUserServer(), MyCon.getUserServer());
+                connection = DriverManager.getConnection(MyCon.getLinkNetbeans(),
+                        MyCon.getUserNetbeans(), MyCon.getPassNetbeans());
                 st = connection.createStatement();
 
                 st.executeUpdate("INSERT INTO commentsArticles(Name, Comment, ArticleNumber, Date) "
