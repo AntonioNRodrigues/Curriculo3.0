@@ -47,13 +47,13 @@ public class ComWithDB extends HttpServlet {
         MyConnection MyCon = new MyConnection();
         try {
             Class.forName(MyCon.getDriver());
-                 connection = DriverManager.getConnection(MyCon.getLinkServer(),
-                        MyCon.getUserServer(), MyCon.getPassServer());
+            connection = DriverManager.getConnection(MyCon.getLinkServerBeta(), 
+                    MyCon.getUserServerBeta(), MyCon.getPassServerBeta());
             st = connection.createStatement();
             String name = request.getParameter("name");
             String email = request.getParameter("email");
 
-            if (email != null && (!name.equals(" ")) && name != null && (!email.equals(" "))) {
+            if (email != null && (!name.equals(" ")) && name != null && (!email.equals(""))) {
                 st.executeUpdate("INSERT INTO comments.insertArticleExample (Name, Email) VALUES ('" + name + "','" + email + "')");
                 out.println("<p>A informação foi inserida</p>");
             } else {

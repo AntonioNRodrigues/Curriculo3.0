@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--
+-->
+<html>
+    <head>
+        <title>Bewell</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- <link rel="stylesheet" href="Articles/IPM/bewell2.css" type="text/css" media="screen"/>-->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+
+
+    </head>
+    <body>
+
+        <div id="mainContent">
+            <div id="estado">
+                <div style="display: none"  id="voltarTrasHistorico" ><a href="#">Voltar</a></div>
+                <div style="display: none"  id="buttonBackMenu" ><a href="#">Início</a></div>
+                <div style="display: none"  id="userName"><a href="#">User</a></div>
+                <div style="display: none"  id="sairSessao" ><a href="#">Sair</a></div>
+            </div>
+            <nav id="menuNavegacao" style="display: none">
+                <ul>
+                    <li><a href="#" id="navPerfil"><b>PERFIL</b></a></li>
+                    <li><a href="#" id="navMedic"><b>CONSULTAS</b></a></li>
+                    <li><a href="#" id="navActFisica"><b>ACTIVIDADES</b></a></li>
+                    <li><a href="#" id="navHistorico"><b>HISTÓRICO</b></a></li>
+                </ul>
+            </nav>  
+
+            <div id="iniciarApp">
+                <div id="entraApp">
+
+                    <ul id="logInSignIn">
+
+                        <li id="log"><a href="#"><b>ENTRAR</b></a></li>
+                        <li id="regis"><a href="#"><b>REGISTO</b></a></li>
+
+                    </ul>
+
+                </div>
+                <div id="popUserNaoEncontrado" class="popUp" style="display: none">
+                    <p>O seu registo não foi encontrado</p>
+                    <button id="buttonOK" class="botao">Tentar de novo</button>
+                    <button id="buttonRegisto" class="botao">Realizar registo</button>
+                </div>
+                <div id="login" style="display: none">
+
+                    <h2>Iniciar Sessão</h2>
+
+                    <p id="emailLogin"><input type="text" placeholder="Email"/></p>
+                    <p id="passLogin" ><input type="password" placeholder="Palavra passe"/></p>
+
+
+                    <a id="loginWithRegister" href="#">CONFIRMAR</a>
+
+                </div>
+
+                <div id="registerApp" style="display: none">
+
+                    <h2>Registo</h2>
+                    <p id="emailUser" ><input id="emailUserInput" type="text" placeholder="Email"/></p>
+                    <p id="firstNameUser"><input id="firstNameUserInput" type="text" placeholder="Primeiro nome"/></p>
+                    <p id="lastNameUser"><input id="lastNameUserInput" type="text" placeholder="Último nome"/></p>
+                    <p id="passUser1" ><input id="passUser1Input" type="password" placeholder="Palavra passe"/></p>
+                    <p id="caracteresPass" >Mínino 4 caracteres</p>
+                    <p id="passUser2" ><input id="passUser2Input" type="password" placeholder="Palavra passe"/></p>
+                    <input id="submitFormReg" type="submit" value="Confirmar">
+                    <input id="registerAppBackButton" type="button" value="Voltar" name="backFromRegister"/>    
+
+
+                    <div id="popUpRegister" class="popUp2" style="display: none">
+                        <p id="popUpRegisterParagrafo"></p>
+                        <button id="buttonFecharpopUpRegister">Ok</button>
+                    </div>
+
+                </div>
+
+                <div id="editarPerfil" style="display: none">
+
+                    <!--     <div id="back"><a href="menu.html"> Voltar </a></div>-->
+                    <h2>Perfil</h2>
+                    <p id="nomePrimPerfil"><input type="text" placeholder="Primeiro nome"/></p>
+                    <p id="nomeUltPerfil"><input type="text" placeholder="Último nome"/></p>
+                    <p id="moradaPerfil" ><input type="text" placeholder="Morada"/></p>
+                    <p id="contactoPerfil" ><input type="number" placeholder="Contacto"/></p>
+                    <p id="nssPerfil"><input type="number" placeholder="NSS"/></p>
+                    <p id="ccPerfil" ><input type="number" placeholder="BI/CC"/></p>
+                    <p id="emailPerfil"><input type="text" placeholder="Email"/></p>
+
+                    <a id="confirmarActualizacaoPerfil" href="#">Confirmar</a>
+
+                    <div id="popUpActualizaPerfil" class="popUp2" style="display: none">
+                        <p id="popUpActualizaPerfilParagrafo"></p>
+                        <button id="buttonFecharpopUpActualizaPerfil">Ok</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="actFisica" style="display: none">
+                <h2>Actividades</h2>
+
+                <ul id="infoActFisica">
+                    <li id="duracao">Duração<p id="duracaoParagrafo" >0:0:0 h</p></li> 
+                    <li id="distancia">Distância<p id="distanicaParagrafo">0 m</p></li>
+                    <li id="calorias">Calorias<p id="caloriasParagrafo" >0 Kcal</p></li>
+                    <li id="freqCardiaca">Freq.Cardíaca<p id="freqCardiacaParagrafo" >0 bpm</p></li>
+                </ul>
+                <select id="tipoActividade" name="listaFisicas">
+                    <option>Físicas</option>
+                    <option>Quotidianas</option>
+                </select>
+                <select id="selectActFisica" name="listaActFisicas">
+                    <option>Natação</option>
+                    <option>Corrida</option>
+                    <option>Btt</option>
+                    <option>Andar</option>
+                </select>
+                <br>
+                <input id="buttonStartActFisica" type="submit" value="Iniciar" name="buttonStartActFisica" />
+                <div id="popUpTerminarTarefa" class="popUp3" style="display: none"> 
+                    <p>Tem a certeza que quer terminar</p>
+                    <input id="confirmaTerminoTarefa" type="submit" value="Sim" name="confirmaTerminoTarefa" />
+                    <input id="naoTerminoTarefa" type="submit" value="Não" name="naoTerminoTarefa" />
+                </div>
+
+                <div id="popUpResumoActFisica" style="display: none"> 
+                    <h3>Resumo</h3>
+                    <ul id="ResumoActFisica">
+                        
+                        <li id="tipoActFisicaResumo"><p></p></li>
+                        <li id="timeResumo">Duração:<p></p></li>
+                        <li id="distanciaResumo">Distancia:<p></p></li>
+                        <li id="caloriasLastActFisicaResumo">Calorias:<p></p></li>
+                        <li id="freqCardiacaActFisicaResumo">Freq. Cardiaca:<p></p></li>
+                        <li id="tipoActividadeResumo" ></li>
+                        <li id="descricaoActFisicaResumo"><input type="text" placeholder="introduza uma comentário"></li>
+                    </ul>
+                    <input id="buttonToMenuActFisica" type="submit" value="Para trás" name="buttonToMenuActFisica" />
+                </div>
+
+            </div>
+
+            <div id="medic" style="display: none">
+                <div id="consulta1">
+                    <h2>Consultas</h2>
+                    <select id="localConsultasMédica" name="localConsultasMédica">
+                        <option>Hospital</option>
+                        <option>Centro de Saúde</option>
+                    </select>
+                    <h4>Local</h4>
+                    <select id="local" name="local">
+                        <option class="hosp">Hospital Santa Maria</option>
+                        <option class="hosp">Hospital Luz</option>
+                        <option class="hosp">Hospital São José</option>
+                        <option class="med">Centro Saúde Cruz Quebrada</option>
+                        <option class="med">Centro Saúde Estefânia</option>
+                    </select>
+
+                    <h4>Especialidade:</h4>
+                    <select id="especialidadesMedicas" name="especialidadesMedicas">
+
+                        <option class="hosp">Cardiologia</option>
+                        <option class="hosp">Urologia</option>
+                        <option class="hosp">Ginecologia</option>
+                        <option class="hosp">Oncologia</option>
+                        <option class="hosp">Estomacologia</option>
+                        <option class="med">Medico Família</option>
+                        <option class="med">Vacinas</option>
+                        <option class="med">Pensos</option>
+                        <option id="adicianaEspeciliadade" class="outra">Outra</option>
+                    </select>
+
+                    <input id="openDatepicker" type="text" placeholder="MM/DD/AAAA"/>
+                    <p id="telHospital"></p>
+                    <p id="emailHospital"></p>
+
+                </div>    
+
+                <div id="datepicker" style="display: none">
+                    <h2>Consultas</h2>
+                </div>
+                <div id="popUpNaoExisteConsulta" class="popUp" style="display: none">
+                    <p id="popUpNaoExisteConsultaParagrafo"></p>
+                    <button id="buttonFecharpopUpNaoExisteConsulta">Fechar</button>
+                </div>
+
+                <div id="listaHorariosDisponiveis" style="display: none"> 
+                    <h2 id="dataHorariosDisponiveis"></h2>
+                    <h4>Horários disponiveís</h4>
+                    <ul id="listaHorariosDisponiveisUL">
+                        <li><input type="checkbox" name="checkBoxListaHorarios" value="10:00"/>10:00</li>
+                        <li><input type="checkbox" name="checkBoxListaHorarios" value="14:00"/>14:00</li>
+                        <li><input type="checkbox" name="checkBoxListaHorarios" value="16:00"/>16:00</li>
+                    </ul>
+                    <input id="buttonConfirmarConsulta" type="submit" value="Confirmar" name="buttonConfirmarConsulta" />
+                    <input id="buttonCancelarConsulta" type="submit" value="Cancelar" name="buttonCancelarConsulta" />
+                </div>
+                <div id="popUpConfirmacaoConsulta" class="popUp" style="display: none">
+                    <p id="popUpConfirmacaoConsultaParagrafo">A sua consulta for marcada com sucesso</p>
+                    <button id="buttonPopUpConfirmacaoConsultaOK">OK</button>
+                </div>
+
+
+            </div>
+
+            <div id="historico" style="display: none">
+
+
+
+                <h2 id="des">Histórico</h2>
+                <ul id="historicoMenu">
+                    <li><a id="historicoConsultas" href="#"><b>CONSULTAS</b></a></li>
+                    <li><a id="historicoActividade" href="#"><b>ACTIVIDADES</b></a></li>
+                </ul>
+                <div id="listaHistoricoConsultas" style="display: none">
+                    <h2>Histórico Consultas</h2>
+                    <ul id="infoLastConsulta1">
+                        <li id="localConsulta1">Hospital Santa Maria</li>
+                        <li id="dataConsulta1">05/21/2014</li> 
+                        <li id="horaConsulta1">12:00</li> 
+                        <li id="especialidadeConsulta1">Ginecologia</li>
+                    </ul>
+                    <ul id="infoLastConsulta2">
+                        <li id="localConsulta2">Centro de Saúde da Estefânia</li>
+                        <li id="dataConsulta2">03/22/2014</li> 
+                        <li id="horaConsulta2">11:00</li> 
+                        <li id="especialidadeConsulta2">Médico Família</li>
+                    </ul>
+                    
+                    
+
+
+                </div>
+                <div id="listaHistoricoActividades" style="display: none">
+                    <h2>Histórico Actividade</h2>
+                    <ul id="infoLastActFisica">
+                        <li>Actividade Física</li>
+                        <li id="tipoActFisicaLast">Desporto: Natação</li>
+                        <li id="dataActFisicaLast">Data: 2015-03-09</li> 
+                        <li id="param1ActFisicaLast">Duração: 00:15 min</li> 
+                        <li id="param2ActFisicaLast">Calorias: 600 Kcal</li>
+                        <li><a class="linkdePartilhaActividades" href="#">Partilhar</a></li>
+                    </ul>
+                     <ul id="infoLastActQuaotidiana">
+                        <li>Actividade Quotidiana</li>
+                        <li>Data: 2015-10-09</li> 
+                        <li>Duração: 00:30 min</li> 
+                        <li>Calorias: 200 Kcal</li>
+                        <li><a class="linkdePartilhaActividades" href="#">Partilhar</a></li>
+                    </ul>
+                </div> 
+                
+                
+                <div id="popUpPartilha" style="display: none" class="popUp">
+                    <p>Deseja Partilhar este informação?</p>
+                    <ul>
+                        <li><input type="checkbox" value="Médico">Médico</li>
+                        <li><input type="checkbox" value="Hospital">Hospital</li>
+                        <li><input type="checkbox" value="Centro de saúde">Centro de saúde</li>
+                        <li><input id="buttonConfirmaPartilha" type="button" value="ok"></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </body>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="Articles/IPM/bewell.js" type="text/javascript"></script>
+    <script>
+    </script>
+
+</html>

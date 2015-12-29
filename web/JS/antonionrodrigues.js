@@ -44,6 +44,7 @@ function normal2(idElem) {
  * a tags do elemento linksEntradas. 
  * @returns {undefined}
  */
+//Deprecated
 function reposicionarBlocoFrontPage() {
     document.getElementById('imagemBackground').style.display = 'block';
 }

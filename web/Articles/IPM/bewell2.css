@@ -1,0 +1,374 @@
+body{
+    position: absolute;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    background-image: url("Imagens/mockup-galaxyNovoCroped.png");
+    background-repeat: no-repeat;
+}
+a{
+    text-decoration: none;
+}
+ul {
+    list-style-type:none;
+}
+
+#popUpResumoActFisica{
+    color: black;
+    position: relative;
+    top: -40px;
+    border: red;
+}
+#ResumoActFisica{
+    position: relative;
+    width: 200px;
+    left: -50px;
+    text-align: center;
+}
+
+#logInSignIn li{
+    position: relative;
+    margin: 1px;
+    background-color: #ffffff;
+    top: 300px;
+    left: 25px;
+    width: 100px;
+    height: 15px;
+    border:2px solid #6cccf2;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 5%; 
+}
+
+#logInSignIn li a{
+    position: relative;
+    top: 0px;
+    font-size: 12px;
+    color: #6cccf2;
+}
+
+#login{
+    position: relative;
+    top: 200px;
+    left: 30px;
+    height: 200px;
+    text-align: center;
+}
+#login h2, #registerApp h2{
+    color: #6cccf2;
+
+}
+
+#loginWithRegister{
+    color: #6cccf2;
+}
+
+.popUp{
+    top:152px;
+    left: 28px;
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    background-color: #6cccf2;
+    text-align: center;
+    border:2px solid #6cccf2;
+    z-index: 3000;
+    border-radius: 20%;
+}
+.popUp3{
+    top:80px;
+    left: 0px;
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    background-color: #6cccf2;
+    text-align: center;
+    border:2px solid #6cccf2;
+    z-index: 3000;
+    border-radius: 20%;
+}
+
+#popUserNaoEncontrado p, #popUpNaoExisteConsulta p,
+#popUpTerminarTarefa p, #popUpRegister p, #popUpActualizaPerfil p, 
+#popUpConfirmacaoConsulta p{
+    font-size: 14px;
+    color: #ffffff;
+}
+
+
+#popUpPartilha p{
+    font-size: 14px;
+    color: #ffffff;
+}
+#popUpPartilha ul{
+
+    font-size: 14px;
+    color: #ffffff;
+    text-align: start;
+}
+
+#buttonOK, #buttonRegisto, #buttonFecharpopUpNaoExisteConsulta,
+#confirmaTerminoTarefa, #naoTerminoTarefa,#buttonFecharpopUpRegister{
+    font-size: 20px;
+    margin: 5%;
+    background-color: #6cccf2;
+    color: #ffffff;
+}
+
+#registerApp{
+    position: relative;
+    top: 170px;
+    left: 30px;
+    height: 200px;
+    text-align: center;
+
+}
+#registerApp #caracteresPass{
+    color: #cfdcec;
+    font-size: 8px;
+
+}
+
+.popUp2{
+    top:0px;
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    background-color: #6cccf2;
+    text-align: center;
+    border:2px solid #6cccf2;
+    border-radius: 20%;
+}
+
+#navPerfil, #navMedic, #navActFisica, #navHistorico{
+    width: 160px;
+    height: 25px;
+} 
+
+#menuNavegacao li, #historicoMenu li {
+
+    position: relative;
+    margin: 1px;
+    background-color: #6cccf2;
+    top: 160px;
+    left: -6px;
+    width: 160px;
+    height: 25px;
+    border:2px solid #6cccf2;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 5%; 
+}
+#menuNavegacao li a, #historicoMenu li a{
+    font-size: 16px;
+    color: #ffffff;
+
+}
+
+#menuNavegacao {
+    position: relative;
+    top: -70px;
+
+}
+
+#duracao {
+    position:relative;
+    color:#6cccf2;
+    left: 400px;
+    top: 10px;
+    width: 70px;
+    z-index: 1000;
+}
+
+#distancia {
+    position:relative;
+    color:#6cccf2;
+    left: -100px;
+    top: -42px;
+    width: 300px;
+    z-index: 3000;
+}
+
+#calorias {
+    position:relative;
+    color:#6cccf2;
+    left: 400px;
+    top: -25px;
+    width: 70px;
+    z-index: 1000;
+}
+
+#freqCardiaca {
+
+    position:relative;
+    color:#6cccf2;
+    right:  -100px;
+    top: -75px; 
+    width: 300px;
+    z-index: 3000;
+}
+
+
+#editarPerfil{
+    position: relative;
+    top:60px;
+    left: 30px;
+    text-align: center;
+}
+#editarPerfil h2, #consulta1 h2, #consulta1 h4, #datepicker h2, 
+#dataHorariosDisponiveis, #actFisica h2{
+    color: #6cccf2;
+}
+#editarPerfil #confirmarActualizacaoPerfil{
+    color: white;
+    font-size: 16px;
+    background-color: #6cccf2;
+    padding: 2%;
+    border: 1px solid #6cccf2;
+    border-radius: 5px;
+}
+
+#consulta1{
+    text-align: center;
+    position: relative;
+    top:100px;
+    left: 15px;
+    max-width: 200px;
+}
+#consulta1 input{
+    margin-top: 10px; 
+}
+#datepicker{
+    zoom: 0.96;
+    position: relative;
+    top:65px;
+    left: 5px;
+    text-align: center;
+}
+#listaHorariosDisponiveis{
+    position: relative;
+    top:120px;
+    left: 10px;
+    text-align: center;
+}
+#listaHorariosDisponiveisUL li{
+    position: relative;
+    left: -20px;
+} 
+
+#actFisica{
+
+    position: relative;
+    top: 30px;
+    left: 25px;
+    text-align: center;
+    width: 180px;
+    height: 250px;
+}
+
+#tipoActividade{
+    position: relative;
+    top: -70px;
+}
+
+#selectActFisica{
+    position: relative;
+    top: -70px;
+}
+
+#infoActFisica li {
+    position: relative;
+    left: -50px;
+}
+
+#listaHistoricoConsultas, #listaHistoricoActividades{
+    position: relative;
+    top:80px;
+}
+#historico #des{
+    position: relative;
+    top: 150px;
+    text-align: center;
+    color: #6cccf2;
+    left: 10px;
+}
+
+#userName a{
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+    font-size: 16px;
+    top: 25px;
+    left: 50px;
+}
+
+#buttonBackMenu{
+    position: relative;
+    margin: 1px;
+    background-color: #6cccf2;
+    top: 417px;
+    left: 155px;
+    width: 65px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1px;
+    font-size: 15px;
+}
+
+#buttonBackMenu a{
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#sairSessao{
+    position: relative;
+    margin: 1px;
+    background-color: #ffffff;
+    top: 375px;
+    left: 75px;
+    width: 75px;
+    border: 1px solid #6cccf2;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1px;
+    font-size: 15px;
+}
+
+#sairSessao a{
+    font-size: 16px;
+    color: #6cccf2;
+}
+
+
+#listaHistoricoConsultas, #listaHistoricoActividades{
+    width: 210px;
+    left: 10px;
+    top: 40px;
+    max-height: 330px;
+    height: 330px;
+    overflow-y: scroll;
+}
+#listaHistoricoConsultas h2, #listaHistoricoActividades h2{
+    text-align: center;
+    color: #6cccf2;
+}
+
+
+#voltarTrasHistorico{
+    position: relative;
+    margin: 1px;
+    background-color: #ffffff;
+    top: 375px;
+    left: 75px;
+    width: 75px;
+    border: 1px solid #6cccf2;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1px;
+    font-size: 15px;
+}
+
+#voltarTrasHistoricoo a{
+    font-size: 16px;
+    color: #6cccf2;
+}

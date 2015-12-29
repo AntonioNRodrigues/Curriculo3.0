@@ -46,7 +46,7 @@ footer a{
 
 header {
     padding-left: 5px;
-    position: relative;// make this not move just set the element to fixed ----> later
+    position: relative;
     right: 0;
     top:0;
     left: 0;        
@@ -336,7 +336,7 @@ body{
 }
 
 #imagemSite{ 
-    background: url(loading.gif) 50% no-repeat;
+    background: url(../Imagens/loading.gif) 50% no-repeat;
 }
 #imagemSite:hover{
     border: 5px solid #CD6600;

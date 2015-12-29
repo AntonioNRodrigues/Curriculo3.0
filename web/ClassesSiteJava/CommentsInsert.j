@@ -1,8 +1,7 @@
 /*
- * Communication with DB.
+ * Servlet that serves to del with the inserction of comments into the data base
  */
-package somework.exemplos;
-
+package model.controlador;
 
 import model.connections.MyConnection;
 import java.io.IOException;
@@ -12,6 +11,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -24,9 +24,10 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Antonio Rodrigues
  * @version 1.0
+ * @Date 2014/09/06
  */
-@WebServlet(name = "ComWithDB", urlPatterns = {"/ComWithDB"})
-public class ComWithDB extends HttpServlet {
+@WebServlet(name = "CommentsInsert", urlPatterns = {"/CommentsInsert"})
+public class CommentsInsert extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,31 +42,59 @@ public class ComWithDB extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        Connection connection;
+        Connection connection = null;
         Statement st;
         ResultSet rs;
+        String controlo = "1";
         MyConnection MyCon = new MyConnection();
         try {
-            Class.forName(MyCon.getDriver());
-                 connection = DriverManager.getConnection(MyCon.getLinkServer(),
-                        MyCon.getUserServer(), MyCon.getPassServer());
-            st = connection.createStatement();
-            String name = request.getParameter("name");
-            String email = request.getParameter("email");
+            Map<String, String[]> mapaParametros = request.getParameterMap();
 
-            if (email != null && (!name.equals(" ")) && name != null && (!email.equals(" "))) {
-                st.executeUpdate("INSERT INTO comments.insertArticleExample (Name, Email) VALUES ('" + name + "','" + email + "')");
-                out.println("<p>A informação foi inserida</p>");
-            } else {
-                out.println("<p>Os Campos nao podem estar vazios</p>");
-                out.println("<p>A informação não foi inserida, tente de novo</p>");
+            String name = null;
+            String comment = null;
+            String date = null;
+            int articleNumber = 0;
+
+            for (String key : mapaParametros.keySet()) {
+                for (String value : mapaParametros.get(key)) {
+                    if (key.equals("name")) {
+                        name = value;
+                    }
+                    if (key.equals("comment")) {
+                        comment = value;
+                    }
+                    if (key.equals("date")) {
+                        date = value;
+                    }
+                    if (key.equals("numberArticle")) {
+                        try {
+                            articleNumber = Integer.parseInt(value);
+                        } catch (NumberFormatException e) {
+                            System.err.println("this is not a number");
+                            System.err.println(e.fillInStackTrace());
+                            controlo = "-1";
+                        }
+                    }
+                }
             }
-            connection.close();
-        } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ComWithDB.class.getName()).log(Level.SEVERE, null, ex);
+            if (name != null && comment != null && articleNumber > 0) {
 
+                Class.forName(MyCon.getDriver());
+                connection = DriverManager.getConnection(MyCon.getLinkServerBeta(),
+                        MyCon.getUserServerBeta(), MyCon.getPassServerBeta());
+                st = connection.createStatement();
+
+                st.executeUpdate("INSERT INTO commentsArticles(Name, Comment, ArticleNumber, Date) "
+                        + "VALUES ('" + name + "','" + comment + "','" + articleNumber + "','" + date + "')");
+                connection.close();
+            }
+
+            out.print(controlo);// var de controlo mandada para o ajax (function ---> insertComment(elemento))
+
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CommentsInsert.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(ComWithDB.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CommentsInsert.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             out.close();
         }
